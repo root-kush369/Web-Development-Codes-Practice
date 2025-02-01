@@ -1,0 +1,251 @@
+/* /CONCLUSION START/ */
+
+/*Point one >>NOTE GRID TEMPLATE ROW AND GRID TEMPLATE COL SAE JO ROWS AND COL BNAUNGA WO BILKUL CHIPAKNE NAHI CHAIHYE
+WITH HEIGHT AND WIDTH OF OUTERDIV means outerdiv he actually grid bnayega and wo he parent hae means usmae he ye sb properties leekeh jayenge
+ but u ssmae jo grid bnega
+ uska sizemuje exact div ke equal nahi rkhna bcoz than center left right placement of grid or parent box/grid nahi kr paunga
+so make rows by gtr  and col by  gtc accordingly
+
+point two) same for child grid items of height/&/width should not have height and width that should not stick to its parent grid
+means grid outer box of grid which is formed
+else positoing dont gonna work of content*/
+
+
+
+
+
+/* point 3
+
+ALTHOUGH~~~ 
+@one Grid template row 
+grid template col
+
+@two grid col start
+grid col end
+
+
+@three grid template area "naming for child box"
+
+
+ALL @ONE @TWO @THREE APPLIES ON GRID PARENT AND REFLECT AT ONCE FOR CHILD
+
+                                        FOR LAYOUT CREATION IN 2D GTR AND GTC MAKES IT IN PRACTICAL
+                                        BUT WHEN I USE DISPLAY : GRID THAN ONLY GRID IS MADE IN 2D OR LAYOUT IS MADE
+                                        FOR 2D
+
+
+
+/@four but grid also give opportunity or facility for positioning aligning grid and child
+@four.1> justify content and align content :-> used in parent div or container and onlyfor grid 
+jc[along main/horizontal] and ac [along vertical]
+
+@four.2> justify items align items -> works for content even which even flexbox dont allows us and 
+jitems -> content placing along horizontal
+aitems -> content placing along Vertical
+/
+IT MAY SEEMS LIKE PLACING/POSITIONING SAME THING LEFT TO RIGHT [MAIN AXIS] TOP TO BOTTOM[CROSS AXIS]
+THATS FLEX ALSO ALLOW BUT HERE I AM DOING TO ALL GRID ITEMS WHICH ARE PLACED ALREADY IN 2D 
+MEANS ALONG HORIZONTAL [LEFT TO RIGHT] ALONG VERTICAL TOO
+WHERE AS FLEX ALLOWS EITHER FLEX-DIRECTION:ROW/ DISPLAY : FLEX [ALONG MAIN AXIS DEFAULT AXIS] [HORIZONTAL ONE  complete box whenend AFTER ANOTHER]
+OR ALONG CROSS AXIS VERTICAL[ONE ONE  complete box whenend AFTER ANOTHER ] one at a time
+thats the diff between flex which plays in 1d at a time with that difference with grid that plays in 2d
+*/
+
+/* /CONCLUSION END/ *********************************************************************************/
+
+*{
+                    margin: 0px;
+                    padding :0px;
+                    box-sizing: border-box;
+}
+
+
+/* .wrapper
+{
+                    background-color: red;
+                    height: 100vh;
+                    width: 100vw;
+                    /* padding: 100px; */
+/* } */
+.outercontainer
+{
+                    background-color: lightcoral;
+                    border: 2px solid black;
+                    height: 90vh;
+                    width: 90vw;
+                    
+                     /* width: 500px; */
+                     /* height: 400px; */
+                    /* display: grid; */
+                    /*grid bntae he griditembox purae seet chipak jayengae
+                    deewar se apne baap budae wale grid pr*/
+             
+                    
+                    /* grid-template-columns: 100px 100px; */
+                    grid-template-columns: 20vw 20vw; /*even thogh dont give child grid width == grid container it will not work*/
+                    /* bcoz col hote to downside hae but
+                    hmko bs spanning dekhne ke colspan hota [remember->left to right h hmesha] 
+                    so width ke trff expand hokr thats why given it unit as vw bcoz colspan widh ke trf expand hora h
+                    and gtr just top to down but hote row ek complete [left to R hae just ignore it]*/
+
+                    /* grid-template-rows: 100px 100px 100px;  */
+                    grid-template-rows: 20vh 20vh 20vh;
+
+
+
+                     /*NOTE LOOP HOLE @a and @b*/
+                    /*@Agrid-template-rows: repeat(2,1fr);  is se justify content parents or child ke property work ne krre
+                    the bcoz grid jo ke childgrid ka h entirely wo pura space lera outer container  ka*/
+                    /*@B grid-template-columns: repeat(3,1fr); */
+                    
+
+
+
+                    /* /this gtr can over-ride height given in parent grid means
+                    will overflow grid child height/ */
+
+                    /* grid-template-areas:  */
+                    /* "top top" here its allowded to give multiple names
+                    but 1 child grid can have 1 gta name always compulsorily
+                    also give naming and space acc to rows and col maine
+                    gtrows and gtc mae dee ho for no error*/
+                    /* "left right"  */
+                    /* "footer footer" */
+                    /* "footer footer"; */
+                    
+                    display: grid;
+                   
+                   
+                    gap: 8px;
+/*these parent and child property tells that we can do alignment and positioning too in grid along 2d axis
+in a time where as flexbox allows 1d at atime although we can do 2d too but*/
+                   
+                    /* [JUSTIFY MEANS == MAIN AXIS HORIZONTAL AXIS KE ALONG
+                    ALIGN MEANS== CROSS AXIS VERTICAL AXIS KE ALONG DONT INCLUDE[HERE ROW/COL ROWSPAN AND COLSPAN N ALL]] */
+                    /* 1> works on grid outerbox to place it here and there */
+                    /*grid wo main axis horizontal axis ke along bdlta rahega*/
+                    justify-content: center;
+                    /* justify-content: start; */
+                    /* justify-content: end; */
+                    /* justify-content: space-around; */
+                    /* justify-content: space-between; */
+                    /* justify-content: space-evenly; */
+                    /* justify-content: start; */
+
+                    
+                    /*grid wo cross axis horizontal axis ke along bdlta rahega*/
+                    /* align-content: center; */
+                    align-content: start;
+                    /* align-content: end; */
+                    /* align-content: space-around; */
+                     /*NOTE CRUCIAL POINT HERE space around space between space end sae gutter increase hojata h 
+                    accordingly*/
+                    /* align-content: space-between;
+                    align-content: space-evenly;*/
+                    /* align-content: center;
+
+                    
+                    /*2>  works on grid child but its parent property means written inside parent
+                    so it can apply to all gird child all at once it apply on grid child boxes
+                    
+                    for individuality excatly same like this but for individual childbox we use
+                    justify self along main (horizontal axis) alignself along cross axis*/
+                    /* align-items: start; */
+                    /* align-items: end; */
+                    /* align-items:first baseline; */
+                    /* align-items: last baseline;  */
+                    /* align-items: start; */
+                    /* align-items: center; */
+                    
+                    /* justify-items: center; */
+                    /* justify-items: start; */
+                    /* justify-items: end; */
+                    /* justify-items:first baseline; */
+                    /* align-items: last baseline; */
+                   
+
+                    
+
+} 
+
+.innercontainer
+{
+                   
+                    
+
+                    /* height: 60px; */
+                    /* width: 80px; */
+
+                    /*give height and width less so it dont stick to grid parent else it will not work  */
+                    height: 6vh;
+                    width: 8vw;
+                    
+                    background-color: aquamarine;
+                
+                    border: 2px solid brown;
+
+                    /* align-items: center; */
+                    /* justify-items: center; */
+                    /* align-items: center; */
+
+
+}
+
+#box1
+{
+                    /* justify-items: center;
+                    align-items: center; proof parent property 2 dont apply on child */
+                    
+/* 1> child property justifyselft= and alignself */
+                    /* justify-self: center; */
+                    /* align-self: center;  */
+                    /*if height width was not fixed it was in center for sure*/
+                    /* /colspan */
+                    /* grid-column-start:1 ;
+                    grid-column-end: 3; */
+
+                    /* grid-area: top; */
+}
+/* #box2 */
+/* { */
+                    /* grid-area: left; */
+                    /* colspan */
+                    /* grid-column-start: 1;
+                    grid-column-end: 2; */
+                    /* rowspan */
+                    /* grid-row-start: 2;
+                    grid-row-end: 3; */
+/* } */
+/* #box3 */
+/* { */
+                   
+                    /* grid-area: right; */
+                    /* colspan */
+                    /* grid-column-start: 2;
+                    grid-column-end: 2; */
+                    
+                    /* rowspan */
+                    /* grid-row-start: 2;
+                    grid-row-end: 3; */
+/* } */
+/* #box4 */
+/* { */
+                    /* grid-area: footer; */
+                    /* colspan */
+                    /* grid-column-start: 1;
+                    grid-column-end: 3; */
+/* } */
+
+/* grid area short hand for grs  gre(rowspan) gcs gce (colspanff)*/
+
+
+
+/* /last property/ */
+
+/* placeitems:~ is short hand for for box of child all at applied to all child at once */
+/* **align items[works along cross axis vertical] and  */
+/* **justify items[works along main axis for :horizontal ] */
+
+/*placeself  is short hand for
+justify self ]
+and alignself apply for individual child elements */
