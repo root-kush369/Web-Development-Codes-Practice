@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* parent grid &properties */
+.parent-grid
+{
+    background-color: red;
+    height: 70vh;
+    /* width: 50vw; */
+    border: 13px solid rgb(7, 8, 8);
+
+    display: grid;
+
+    gap: 10px;
+
+    /* grid-template-rows: 10px; */
+    
+    /* 1> */
+
+    grid-template-rows: 90px 400px 40px;
+    grid-template-columns: 180px 180px 180px 180px;
+    /* grid-template-rows: repeat(3,1fr); */
+    /*1fr means complete space till it meets its adjacent walls*/
+    /* grid-template-rows: 40px 1fr 40px; */
+    /* grid-template-columns: repeat(2,1fr); */
+
+    /* 2> */
+    /* grid-auto-rows: minmax(50px ,  300px); */
+
+    /* 3> */
+
+    
+    /* grid-template-areas: ""; */
+
+    /* 4> */
+
+    
+
+    /* 5>  */
+    /* grid-template-areas: 
+    "hd hd hd hd"
+    "ls ls rs rs"
+    "ft ft ft ft"; */
+
+
+    /* 6 > parent properties*/
+    /* 6.1 */
+
+    /* this property applies on outerCompletegrid  */
+    /* justify-content: center; */
+    /* justify-content: start;  */
+    /* justify-content: end; */
+    /* justify-content:baseline;not work */
+    /* justify-content: left;
+    justify-content: right;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+    /* 6.2  */
+    /* align-content: start; */
+    /* align-content: end; */
+    /* align-content: center; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: space-evenly; */
+    /* align-content: last baseline; dont works*/
+
+
+    /* this property applies on child items allATonce/items wale game gridchild pr hae all at once 
+    for individuality on child use justifyself and alignself whoseshorthand is placeself*/
+    /* justify-items: center; */
+    /* justify-items: start; */
+    /* justify-items: end; */
+    /* justify-items: center; */
+    /* justify-items: auto ; */
+    /* justify-items: first baseline ; dont work */
+    /* justify-items: safe; dont work */
+    
+    
+    /* align-items: center; */
+    /* align-items: start; */
+    /* align-items: end; */
+    /* align-items: flex-start; like start and end */
+    /* align-items: flex-end;like start and end */
+    /* align-items: end; */
+
+}
+/* child grid &properties */
+.childgriditems
+{
+    height: 6vh;
+    width: 8vw;
+    /* height: 8vh; */
+    background-color: yellowgreen;
+    /* width: 20vw; */
+    border: 3px solid rgb(30, 236, 236);
+
+    /* place-items: center; */
+
+}
+
+#box1
+{
+
+    /* child properties */
+    /* justify-self: center; */
+    /* justify-self: start; */
+    /* justify-self: end; */
+    /* justify-self: right; */
+    /* justify-self: flex-start; */
+    /* justify-self: flex-end;  */
+
+    /* align-self: flex-start; */
+    /* align-self: start; */
+    /* align-self: end; */
+    /* align-self: center; */
+    /* align-self:baseline;dont work */
+    /* align-self: first baseline; dontwork*/
+    /* align-self:center; */
+    /* align-self: ; */
+
+    /* grid-area: hd; */
+    /* colspan   */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* help in tailwind so remember */
+    /* place-self:center ;*/
+    /* place-self: start; 
+    place-self: center; */
+    /* place-self: space-between; dontwork */
+    
+    /* place-items: ; */
+
+
+    /* justify-items:start ; */
+    /* justify-items: end; */
+
+}
+#box2
+{
+    /* grid-area: ls; */
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3; */
+    /* place-items: ; */
+}
+#boxthree
+{
+    /* grid-area: rs; */
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;  */
+    
+    
+}
+#box4
+{
+    /* grid-area: ft; */
+    /* grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3; */
+
+
+    /* place-items: center; */
+    /* place-content: center; */
+
+    /* place-self: center; */
+    
+    /* place-content: center; */
+    /* place-items: end; */
+    /* place-items: center; */
+    /* place-self: center; */
+    
+    
+}
+

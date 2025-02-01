@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent-flex
+{
+    background-color: red;
+    height: 70vh;
+    width: 50vw;
+    border: 13px solid rgb(7, 8, 8);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+
+    /* align-items: start; */
+    /* align-items: end; */
+    /* align-items: first baseline; */
+    /* align-items: last baseline; */
+    align-items: center;
+    /* align-items: stretch; */
+
+
+    /* works, if row form  somehow if i increase/stretch width of flex-items ->between flex items ,probably formed by flex-wrap:Wrap */
+    /* align-content: start; */
+    /* align-content: end; */
+    /* align-content: first baseline;dontwork */
+    /* align-content: last baseline; dontwork*/
+    /* align-content:flex-start ; works */
+    /* align-content:flex-end;
+    align-content:space-around;
+    align-content: space-between;
+    align-content: space-evenly; */
+    
+}
+.childflexitems
+{
+    border: 3px solid rgb(226, 223, 223);
+    background-color:green;
+    color: whitesmoke;
+    /* height: 8vh; */
+    /* width: 8vw; */
+    /* width: 100%; */
+
+
+    /* child property works on all at once or  */
+    /* flex-shrink: 2; */
+
+    
+
+}
+
+#box1
+{
+    /* width: 100%; */
+    /* flex-grow: 2; */
+     /*increase with the width of flex-parent but flex child width should not be given*/
+    /* flex-shrink: 2; */
+    /* order: 1; */
+}
+#box2
+{
+    /* order: 3; */
+}
+#boxthree
+{
+    /* order: 1; */
+    /* background-color: red; */
+
+    align-self: flex-start;
+    /* justify-self: flex-end; jself is java script property */
+    align-self:flex-end;
+    align-self: center;
+    align-self: stretch; /*remove height and width*/
+    align-self: first baseline;
+    align-self: baseline;
+    align-self: last baseline;
+
+    /* align-self: stretch; */
+
+}
+#box4
+{
+
+}
