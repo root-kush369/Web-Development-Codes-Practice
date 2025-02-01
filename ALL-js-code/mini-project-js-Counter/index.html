@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_project-Increment-Decrement-GUI</title>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        /* //internal css highest priority */
+        /* #kush
+        {
+            background-color: red;
+            color:black;
+        }
+        .ramji
+        {
+            background-color: orange;
+            color:blueviolet;
+        } */
+    </style>
+
+
+</head>
+
+<!-- checked myself bycode -->
+<!-- most power specificity in tailwind-->
+<!-- !external css>internal css [id >class>tag] > inline css -->
+
+
+<!-- //checked myself bycode -->
+<!-- most power specificity in tailwind-->
+
+<!-- //inline > internal[id>class>tags]>extenralcss -->
+<body>
+    
+
+    
+
+    
+    <!-- <h1 id= "kush" class="font-sans; text-red-400">kush bhardwaj</h1> -->
+    <!-- <h1 id= "kush" class="ramji  " style="background-color: black ; color: green;">kush bhardwaj</h1> -->
+    <!-- <h1 id= "kush" class="ramji">kush bhardwaj</h1> -->
+
+<!--1>topdiv wrapper -->
+    <div class="wrapper; box-border; m-0; p-0  h-[100vh] ; w-[100vw] ; bg-gray2 ; flex ; flex-row ; justify-center ; items-center ; gap-10">
+        <!--2> middle-div-containing-content -->
+        <div class="middle-div-containing-content ; flex ; flex-col ; gap-12 ; p-3 ; px-5"> 
+            <!-- p-3 px-5 ux designer deega ne to hit and trial kro ,jo attractive lage wo daaldo  -->
+      
+                <!-- 3 div containing heading -->
+                 <div class="incrementANDdecrement ">
+                    
+                    <h1 class="text-green-200 ; font-mullish ; font-bold ; text-[20px]">Increment And Decrement</h1>
+                
+                </div>
+
+                 <!-- 4 div containing box for actual + and - -->
+                  <div class="flex ; flex-row ; gap-12 ; p-3 ; px-5  ; border ; justify-center ; items-center ; bg-white ; w-[100%] ; h-[100%]">
+                    <!-- <img class="plus ; h-8 ;" src="./plus.png" alt="plus"> -->
+
+                    <!-- 1st button/1st item -->
+                     <!-- -ve -->
+                      <!-- //i tag for importing icon -->
+                    <button onclick ="decrement()" class="plus fa solid fa-minus ; cursor-pointer ; border-r-2 ; border-[#bfbfbf] ; pr-5">
+
+                        <!-- //means onclick sae mae function call krlunga it requires func which i need to run -->
+                    </button >
+                    
+                    
+                    <!-- 2nd item -->
+                    <p class=" cursor-wait ; font-bold" id="middleValue">0</p>
+
+                    <!-- 3rd item -->
+
+                    <button onclick="increment()" class="fa-solid fa-plus ; border-l-2 ; border-[#bfbfbf] ; pl-5">
+
+                    </button>
+
+                    
+                    
+                    
+                    <!-- <img class="minus ; h-8 ;" src="./minus.png" alt="minus" >  -->
+
+                    <!-- img src="https://private-user-images.githubusercontent.com/89827931/263457603-4d45999d-b2dc-43a1-a25b-49e27667b7cf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQ4NzY4MDcsIm5iZiI6MTczNDg3NjUwNywicGF0aCI6Ii84OTgyNzkzMS8yNjM0NTc2MDMtNGQ0NTk5OWQtYjJkYy00M2ExLWEyNWItNDllMjc2NjdiN2NmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjIyVDE0MDgyN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYzNmYzNWIzZDUxYWExOTRjMjRjNjgyY2ZhOTIyN2FlZDQ5Y2E5ODFjMzI2N2QyODIxZGNjYzI5NDVkZmI1YTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.QSpBmAOGxYahPAJS8FWWrSKpJspwPGPTMWVJZQoiRGw" alt=""  -->
+
+                  </div>
+        </div>
+
+    </div>
+
+
+    <!-- //included font-awesome website kit to get all icons -->
+<script src="https://kit.fontawesome.com/fbc93f15c4.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- //now brain js mae hae logic ke - button pr -1 -2 .. and +click pr 1 2 3 4 -->

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ #kush
+        {
+            background-color: red;
+            color:deep;
+        }
