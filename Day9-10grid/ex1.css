@@ -1,0 +1,86 @@
+*{
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+}
+.outerdiv
+{
+                    display: grid;
+                    width: 500px;
+                    height: 500px;
+                    border: 2px solid black;
+                    background-color: aqua;
+
+                    /* grid-template-rows: repeat(2,1fr); */
+                    /* grid-template-rows:  1px 1fr,1fr; */
+                    /* these 4 units are of rows */
+                    /* grid-template-columns: repeat(2,1fr); */
+                    
+                    
+
+                    /* /1>NOTE WHEN I APPLY THIS METHOD OF DISTRIBUTING COL SIZE AND ROW SIZE DONT GIVE WIDTH INSIDE OUTER CONTAINER
+                    OR PARENT GRID                   */
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*these 4 units are of columns*/
+                    grid-template-rows: 30px 1fr 30px 1fr 30px;
+                    gap: 15px;
+}
+.innercontainer
+{
+                    background-color: red;
+                    border: 2px solid green;
+                    /* height: 50px; */
+                    /* width: 50px; */
+                    /* heights and width not giving as i had to span */
+}
+/* rowspan for elangate towards row*/
+#box1
+{
+ grid-column-start: 1;
+ grid-column-end: 6;
+
+}
+
+#box2
+{
+      /* colspan */
+      grid-row-start: 2;
+      grid-row-end: 5;
+}
+
+#box3
+{
+      /* colspan */
+      grid-row-start: 2;
+      grid-row-end: 5;
+      
+      /*ROWSPAN BY GCS AND GCE*/
+      grid-column-start: 2;
+      grid-column-end: 5;
+}
+
+#box4
+{
+        
+/* colspan means -> grid items ko row ke trf bdaa rhaa hu  by grs and gre*/
+   grid-row-start: 2;                 
+   grid-row-end: 5;
+/* rowspan means-> grid items ko coloumn ke trf bdaa rhaa hu kheech rhaa hu by gcs and gce */
+   /* grid-column-start: 5;
+   grid-column-end: 6; */
+
+
+}
+
+#box5
+{
+        
+/* colspan means -> grid items ko row ke trf bdaa rhaa hu  by grs and gre*/
+   /* grid-row-start: 2;                 
+   grid-row-end: 5; */
+/* rowspan means-> grid items ko coloumn ke trf bdaa rhaa hu kheech rhaa hu by gcs and gce */
+   grid-column-start: 1;
+   grid-column-end: 6;
+
+
+}
+

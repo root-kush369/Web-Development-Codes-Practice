@@ -1,0 +1,230 @@
+/*1) basically apply on everything has least specificity among all and works on entire tag from html head body and inside body i use more tag
+*/
+*{
+                    margin: 0px;
+                    padding: 0px;
+                  box-sizing: border-box;
+}
+
+
+
+
+
+/*2) for best practice put every content inside it */
+#mainwrapperforgoodPract
+{
+                    border: 10px solid black;
+                    padding: 10px;
+                    /* height: 100px; if we dont give height it takes itself acc to parent element if not parent than next parent than current till  root element  */
+                    /* width: 100%; */
+                    overflow-x: hidden;
+                    /* overflow-y: scroll; use na kru tb b work krra bcoz height is 100% in wrapper*/
+
+                    margin: 2px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+/*3) why this taken so to place (the box/thecontainercalled(actuallgallery div)
+                                        which is treated as flex parent to place its flex item figuretag(which is block element again) 
+                                                            all together cards(which is inside actually gallery div
+
+                                                            and heading h1*/
+.containerpackinggallery 
+        /* object-position: center; */  
+ {
+                    border: 4px solid red;
+                    
+                    height: 100%; 
+                    /*percent is relative to percent into parent so full height*/
+                    max-width: 1200px; /*jyada 1200 sae to overflow thats max-width*/
+                    
+                    margin: 0 auto ; /*left right top down ke width equal hojate h its for placing container/box in center
+                    REMEMBER it*/
+                    
+                    padding: 20px;
+ }
+
+
+
+/*NOTE IMP SHORTHAND NOTATION FOR FUTURE USE margin top right bottom left this is long hand for shorthand margin 
+                                                            if written single time margin but suppose i wrote
+                                                            margin:10px 0 than its 10px was for top and right and 0 for left and right*/
+ .containerpackinggallery h1
+{
+                    /* margin: 20px 0; */
+                    margin: 10px;
+
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 3rem;
+                    border: 2px solid lightslategray;/*i gave border to understand spacing kon khaa tk seemet hae uske
+                    border uske seema*/
+}
+
+
+
+
+
+
+
+
+/*4)container that contains all cards used so i can create flex and give a wrap */
+/*taken so i can use flex parent to it and place flex items that is figure that having cards
+
+NOW BCOZ OF THIS FLEX PARENT ALL FIGURE TAG CARDS TAKE HEIGHT ALONG HORIZONATLLY COMPLETELY TILL THIS DIV I.E
+actualgallerycontainer*/
+
+
+
+
+
+.actualgallerycontainer
+{
+                  
+                    display: flex; /*space distrubution hojaye yaa horizontal hojaye*/
+                     
+                    flex-wrap: wrap; /*agr mere outercontainer means gallery container ka size km hae 
+                     figure block element sae to wo fit yaani nextlines maee aajyenge*/
+
+                    justify-content: space-evenly;
+
+                    /* height: 100%; */
+                    /* margin: 10px; */
+                    padding: 10px;
+                    border: 6px solid darkkhaki;
+
+                     /* justify-content: center;
+                     align-items: center; */
+
+}
+
+
+
+
+
+/*5)figurediv...
+...for CARD having IMAGE ITS CONFIGURATION WITH CLASS NAME*/
+
+.cardhavingimage
+{
+                    
+                    /* position: relative;  */
+                    /*v imp written bcoz text need to be made overlapped over image*/
+                    border: 4px solid green;
+                    
+                    width: 32%;  /*means ek row mae 3 he element aayae tbhii calculate kree {{divcontainerpackinggallery}} 1200px kae hisaab sae*/
+                    height: 400px;
+                    /* height: 100%; */
+                    
+                    /*width of card*/
+
+                    position: relative; /*text ko overlap krna image pr so relative or iske position apne original position ke respect mae change hota rahega*/
+                    margin-bottom: 20px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    
+                    box-shadow:  4px 4px 3px lightcoral ,-4px -4px 3px lightgreen ; /*dont work on not box means not block elements like img tag*/
+
+                    /* padding: 5px; cards looking ugly with it*/
+
+                   
+       
+                    
+}
+
+
+
+/*6)..
+..images which is inline tag there configiration*/
+
+
+.image
+{
+                    
+                    width: 100%;
+                    object-fit: cover; /*img ek inline hae so jo uske bhaar ek block element milega immediate parent wha tk stretch hojayege
+                    image charo oro sae*/
+                     /*no need of this bcoz all image except 2nd and 8th are misplaced so i will do individually*/
+                    filter: grayscale(100%);
+                    /* height: 100%;  sae ye card jitne height lega or iska corner round hojyengae*/
+                    /* height: 100%; */
+                   
+
+}
+
+#eighthimg
+{
+                    height: 400px;
+                    object-fit: cover;
+
+}
+
+#secondimg
+{
+                    height: 480px;
+                    /* object-fit: cover; */
+
+}
+
+/* 7 hovering for making image scale move */
+.cardhavingimage:hover
+{
+           transform: scale(1.1);         
+           filter: drop-shadow(0 0 10px #ed0d90);  /*shadow wala filter*/
+           /* box-shadow: (0 0 10px #444); boxshadow mae spread or blurry lgaakr same drop shadow bnjayega*/
+           transition: 0.3s;
+           
+}
+
+
+/* .image:hover{
+                    filter: grayscale(0%);
+} */
+
+
+
+.cardhavingimage .image:hover
+{
+                    filter: grayscale(0%);
+}
+
+/*8th figcaption details it means .class mae figcaption tag mae kyaa krna hae */
+.cardhavingimage figcaption
+{
+                    position: absolute;
+                    /* top: 330px; */
+                    bottom: 0;
+                    left:0;
+                    color: whitesmoke;
+                    padding: 25px;
+                    /* border: 2px solid black; */
+                    width: 100%; /*width and height is % of parent i.e divcardhavingimage*/
+                    height: 20%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    opacity: 0; 
+                    /*means transparency 0*/
+                    border-radius: 0 0 10px 10px;
+                    background-image: linear-gradient(0deg rgba(0,0,0,0.5) 0% , rgba(0,0,0,0.5) 0% );
+                    transition: 0.5s;
+}
+
+
+
+/**this syntax means class cardhavingimage pr hover krnae pr figcaption ka kyaa krna h/
+.cardhavingimage:hover figcaption
+{
+                    opacity: 1;
+                    transform: scale(1.03);
+}

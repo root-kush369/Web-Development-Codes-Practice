@@ -1,0 +1,37 @@
+/* ex1p
+{
+                    border: 2px solid black;
+                    min-height: 100px;
+                    max-height: 100px;
+                    overflow-y: hidden;
+                    overflow-y: auto;
+}
+span
+{
+                    border: 3px solid green;
+} */
+
+/* ex2 */
+
+.outercontainer
+{
+                    border:2px solid brown;
+                    background-color: yellow;
+                    /* width: 500px; */
+                    height: 500px;
+                    display: flex;
+                    gap: 10px;
+                    /* justify-content: center; */
+                    /* align-items: center; */
+}
+.innercontainer
+{
+                    border: 1px solid green;
+                    background-color: red;
+                    min-width: 50px;
+                    height: 80px;
+                    align-self: center;
+                    
+                    
+                    
+}

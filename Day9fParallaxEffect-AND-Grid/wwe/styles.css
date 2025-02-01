@@ -1,0 +1,370 @@
+/*1) basically apply on everything has least specificity among all and works on entire tag from html head body and inside body i use more tag
+*/
+*{
+                    margin: 0px;
+                    padding: 0px;
+                  box-sizing: border-box;
+}
+
+
+
+@font-face {
+  src: url("Rockybilly.ttf") ;
+  font-family:"Rockybilly.ttf";
+  
+}
+
+
+/*2) for best practice put every content inside it */
+#mainwrapperforgoodPract
+{
+                    /* border: 10px solid black; */
+                    /* padding: 10px; */
+                    /* height: 100px; if we dont give height it takes itself acc to parent element if not parent than next parent than current till  root element  */
+                    /* width: 100%; */
+                    overflow-x: hidden;
+                    /* overflow-y: scroll; use na kru tb b work krra bcoz height is 100% in wrapper*/
+
+                    /* margin: 2px; */
+
+                    /* perspective: 10px; */
+                   
+}
+
+ 
+#vid
+{
+
+  /* url aata h block wale bg-image tag pr src img inline tag pr ~NOTE(dont confuse) */
+  /* background-image: url("flame.mp4");
+  background-position: center;
+  background-size: cover;  */
+  /* position:relative; */
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  /* width: 100vw; */
+  /* height: 100vh; */
+  
+  /*object-fit wale cheez inline wale img tag pr*/
+  
+  
+ 
+ 
+
+  
+  /* transform: translateZ(-80px) scale(10); */
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+/*3) why this taken so to place (the box/thecontainercalled(actuallgallery div)
+                                        which is treated as flex parent to place its flex item figuretag(which is block element again) 
+                                                            all together cards(which is inside actually gallery div
+
+                                                            and heading h1*/
+.containerpackinggallery 
+        /* object-position: center; */  
+ {
+  
+
+                    /* position: absolute; */
+                    /* transform-style: preserve-3d; */
+                    transform: translateZ(-10px) scale(0.9);
+                  
+                    /* border: 4px solid red; */
+                    
+                    height: 100%; 
+                    /*percent is relative to percent into parent so full height*/
+                    max-width: 1200px; /*jyada 1200 sae to overflow thats max-width*/
+                    
+                    margin: 0 auto ; /*left right top down ke width equal hojate h its for placing container/box in center
+                    REMEMBER it*/
+                    
+                    padding: 20px;
+                    z-index: 1;
+ }
+
+
+
+/*NOTE IMP SHORTHAND NOTATION FOR FUTURE USE margin top right bottom left this is long hand for shorthand margin 
+                                                            if written single time margin but suppose i wrote
+                                                            margin:10px 0 than its 10px was for top and right and 0 for left and right*/
+ .containerpackinggallery h1
+{
+
+
+                    font-family:"Rockybilly.ttf";
+                    margin: 20px 0;
+                    /* margin: 10px; */
+                    /* padding: 30px; */
+
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 2rem;
+                    /* border: 2px solid lightslategray; *//*i gave border to understand spacing kon khaa tk seemet hae uske
+                    border uske seema*/
+
+                    color: darkslategrey;
+
+                    font-weight: bolder;
+                    text-shadow: 5px 5px 6px rgb(255, 146, 3) , 8px 7px 2px rgb(241, 17, 65);
+                    
+
+}
+
+
+
+
+
+
+
+
+/*4)container that contains all cards used so i can create flex and give a wrap */
+/*taken so i can use flex parent to it and place flex items that is figure that having cards
+
+NOW BCOZ OF THIS FLEX PARENT ALL FIGURE TAG CARDS TAKE HEIGHT ALONG HORIZONATLLY COMPLETELY TILL THIS DIV I.E
+actualgallerycontainer*/
+
+
+
+
+
+.actualgallerycontainer
+{
+                  
+                    /* margin: 100px;  */
+                    /*all side margin is not fine*/
+
+                    margin-top: 100px;
+                    display: flex; /*space distrubution hojaye yaa horizontal hojaye*/
+                     
+                    flex-wrap: wrap; /*agr mere outercontainer means gallery container ka size km hae 
+                     figure block element sae to wo fit yaani nextlines maee aajyenge*/
+
+                    justify-content: space-evenly;
+
+                    /* height: 100%; */
+                    /* margin: 10px; */
+                    padding: 10px;
+                    /* border: 6px solid darkkhaki; */
+
+                     /* justify-content: center;
+                     align-items: center; */
+          gap: 18px;
+}
+
+
+
+
+
+/*5)figurediv...
+...for CARD having IMAGE ITS CONFIGURATION WITH CLASS NAME*/
+
+.cardhavingimage
+{
+                    
+                    /* position: relative;  */
+                    /*v imp written bcoz text need to be made overlapped over image*/
+                    /* border: 4px solid green; */
+                    
+                    width: 32%;  /*means ek row mae 3 he element aayae tbhii calculate kree {{divcontainerpackinggallery}} 1200px kae hisaab sae*/
+                    height: 400px;
+                    /* height: 100%; */
+                    
+                    /*width of card*/
+
+                    position: relative;
+                    /* position: relative; */
+                    /* position: fixed; */
+                    position: sticky;
+                     /*text ko overlap krna image pr so relative or iske position apne original position ke respect mae change hota rahega*/
+                    /* margin-bottom: 20px; */
+                    border-radius: 22px;
+                    overflow: hidden;
+                    
+                    box-shadow:  4px 4px 3px rgb(176, 172, 172) ,-4px -4px 3px rgb(240, 82, 164) ; /*dont work on not box means not block elements like img tag*/
+
+                    /* padding: 5px; cards looking ugly with it*/
+
+                   
+       
+                    
+}
+
+
+
+/*6)..
+..images which is inline tag there configiration*/
+
+
+/* .cardhavingimage @11xx11
+{
+  filter: grayscale(100%);
+} */
+.image
+{
+                    
+                    width: 100%;
+                    object-fit: cover; /*img ek inline hae so jo uske bhaar ek block element milega immediate parent wha tk stretch hojayege
+                    image charo oro sae*/
+                     /*no need of this bcoz all image except 2nd and 8th are misplaced so i will do individually*/
+                    filter: grayscale(100%);/* used above in @11xx11 to filter image grayscale entirely although i can use it card image too*/
+                    /* height: 100%;  sae ye card jitne height lega or iska corner round hojyengae*/
+                    /* height: 100%; */
+                   
+
+}
+
+/* //for  seven eight and second and third image externally had to setwdith */
+
+#imagesix
+{
+  height: 400px;
+  object-fit: cover;
+}
+#imageseven
+{
+                    height: 400px;
+                    object-fit: cover;
+
+}
+#imageeight
+{
+                    height: 400px;
+                    object-fit: cover;
+
+}
+
+#secondimg
+{
+                    height: 400px;
+                    /* object-fit: fill; */
+                    object-fit: cover;
+
+}
+#imagethird
+{
+  height: 400px;
+  /* object-fit: cover;  */
+  /*objectfit for img inline tag and    
+   background-size: cover;
+  background-position: center; is for background images */
+}
+/* //for eight and second  and third image externally had to setwdith */
+/* 7 hovering for making image scale move */
+.cardhavingimage:hover
+{
+           transform: scale(1.1);         
+           filter: drop-shadow(0 0 10px #ed0d90);  /*shadow wala filter*/
+           /* box-shadow: (0 0 10px #444); boxshadow mae spread or blurry lgaakr same drop shadow bnjayega*/
+           transition: 0.3s;
+           
+           cursor:pointer;
+           
+           
+}
+
+/* error on hoveringresolved*/
+
+/******************************************************************
+/* .image:hover{
+                    filter: grayscale(0%);
+} */
+ 
+
+
+/*view:~
+
+.image:hover { filter: grayscale(0%); }: This rule applies the effect only when the image itself is being hovered over. So, if your mouse is over the image, it will remove the grayscale filter.
+ However, if you hover over the
+or any other area of the card, this rule won’t trigger, and the image will 
+remain in grayscale. .cardhavingimage:hover .image { filter: grayscale(0%); }: 
+This rule applies the effect when you hover over the entire card, including both the image and the figcaption.
+ It means that as long as you are hovering anywhere within the bounds of the .cardhavingimage
+  (which includes the image and the figcaption), the grayscale will be removed.
+ */
+
+
+
+
+
+
+
+/* Remove grayscale when hovering over the card */
+
+.cardhavingimage:hover .image {
+  filter: grayscale(0%);
+} 
+
+
+
+/******************************************************************
+
+
+
+
+
+
+
+
+
+/*8th figcaption details it means .class mae figcaption tag mae kyaa krna hae */
+.cardhavingimage figcaption
+{
+
+                    font-weight: bolder;
+                    /* font-family: "Sofia", sans-serif; */
+                    font-family: "Audiowide", sans-serif;
+
+                    
+                    position: absolute;
+                    /* top: 330px; */
+                    bottom: 0;
+                    left:0;
+                    color: whitesmoke;
+                    padding: 25px;
+                    /* border: 2px solid black; */
+                    width: 100%; /*width and height is % of parent i.e divcardhavingimage*/
+                    height: 20%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    /* opacity: 0;  */
+                    /*means opacity==transparency 0*/
+                    border-radius: 0 0 10px 10px;
+                    background-image: linear-gradient(0deg rgba(0,0,0,0.5) 0% , rgba(0,0,0,0.5) 0% );
+                    transition: 0.5s;
+}
+
+/* .sansita-swashed-.figcaption {
+  font-family: "Sansita Swashed";
+} */
+
+
+/**this syntax means class cardhavingimage pr hover krnae pr figcaption ka kyaa krna h*/
+.cardhavingimage:hover figcaption
+{
+                    opacity: 1;
+                    transform: scale(1.03);
+                    cursor: progress; /*when i hover or cursor diff pointer than cursor of image*/
+                    /* filter: grayscale(0%); */
+}
+/* .figcaption just curious to see border around text over image i positioned as absolute for overlap so want
+to see its border
+{
+  
+  border: 4px solid red;
+  background-color: aqua;
+} */
