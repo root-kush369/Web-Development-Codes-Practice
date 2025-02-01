@@ -1,0 +1,49 @@
+#top
+{
+                    text-align: center;
+                    font-style: italic;
+                    font-size: x-large;
+                    
+}
+
+.links
+{
+                    text-align: center;
+                    font-style: italic;
+                    font-size: xx-large;
+}
+
+/* #OuterMon
+{
+                    display: inline-block;
+                    
+                    background-image: url(CHEST\ WORKOUT\ LIKE\ ARNOLD\ SCHWARZENEGGER.jpg);
+                    
+                    background-size: cover;
+                    opacity: 20%;
+} */
+
+.Mon
+{
+                    
+                    color:color-mix(in srgb, rgb(17, 5, 17), rgb(28, 26, 25))
+                    /* opacity: 100%; */
+                    
+}
+.Mon1
+{
+                    text-align: center;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size:medium;
+}
+#Tue
+{
+                    display: inline;
+                    /* background-color: yellow; */
+                    background-position: 0%;
+                    background-size: cover;
+                    align-content: center;
+                    width: 400px;
+                    height: 350px;
+}
+

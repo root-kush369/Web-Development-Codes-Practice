@@ -1,0 +1,84 @@
+*{
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+}
+#universal_anchor_tag{
+                    align-content: end;
+                    font-size: xx-large;
+                    color: green;
+                    float:right;
+                    /* border: 2px solid black; */
+
+}
+@font-face {
+                    src: url("Rockybilly.ttf") ;
+                    font-family:"Rockybilly.ttf";
+                    
+                  }
+
+.link{
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: black;
+}
+#verytopheading
+{
+                    font-family:"Rockybilly.ttf";
+                    color: black;
+                    text-shadow: 2px 2px 8px rgb(28, 27, 26) ,2px 2px 8px rgb(221, 215, 221);
+}
+
+#TOP
+{
+                    font-size: xx-large;
+                    
+                    width: 100%;
+                    /* height: 100%; */
+                    
+                    text-align: center;
+                    font-family:"Rockybilly.ttf";
+                    position: fixed;
+                    /* padding-bottom: 20px; */
+                    /* bottom: 0px;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px; */
+                    /* margin-bottom: 250px; */
+                    
+                    
+                    
+                    /* border: 4px solid black; */
+                    /* background-color: black; */
+                    /* background-image: linear-gradient(to right, rgba(255,0,210,8), rgb(222, 24, 176,10));
+                     */
+                     /* background: linear-gradient(#e66465, #9198e5); */
+                     background-image:linear-gradient(to right, rgb(108, 164, 160), rgb(235, 184, 122), rgb(220, 129, 174) );
+
+}
+
+#one{
+                    margin-top:150px;
+                    background-image:linear-gradient(in hsl longer hue, rgba(223, 20, 50,0.2), rgba(229, 13, 211,0.2));
+                    opacity:80px ;
+}
+
+
+
+#three{
+                    background-image:linear-gradient(in hsl longer hue, rgba(223, 20, 50,0.2), rgba(229, 13, 211,0.2));
+                    opacity:80px ;
+}
+
+#four{
+                    background-image:linear-gradient(in hsl longer hue, rgba(223, 20, 50,0.2), rgba(229, 13, 211,0.2));
+                    opacity:80px ;
+}
+
+#five{
+                    background-image:linear-gradient(in hsl longer hue, rgba(223, 20, 50,0.2), rgba(229, 13, 211,0.2));
+                    opacity:80px ;
+}
+
+
+
+

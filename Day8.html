@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+</head>
+<body>
+                    <h1>Employee Details</h1>
+
+                    <form action="">
+
+                                        <label for="name">uname</label>
+                                        <input type="fname" id="name" name="fname" placeholder="EnterValue" required>
+                                        <br>
+                                        
+                                        <label for="em">email:</label>
+                                        <input type="email" id="em" name="EM" placeholder="EnterValue" required>
+                                        
+                                        <br>
+                                        <label for="tl">telephone:</label>
+                                        <input type="tel" id="tl" name="telp" placeholder="EnterValue" >
+                                        <br>
+                                        
+                                        
+                                        <!-- backend pr value automatically ne jayege bs golae mae tick krra
+                                         tbhi yhaa use kro compulsory value -->
+                                        <label for="gend">Gender:~</label>
+                                        
+                                        <label for="M">MALE</label>
+                                        <input type="radio" id="M" name="Gender" value="Male">
+                                        
+                                        <label for="F">FEMALE</label>
+                                        <input type="radio" id="F" name="Gender" value="Female">
+                                        
+                                        <label for="O">OTHER</label>
+                                        <input type="radio" id="O" name="Gender" value="Other">
+
+
+                                        <br>
+                                        <label for="job">Jobtitle</label>
+                                        <input type="text" placeholder="EnterValue" id="job" name="JOB">
+                                        <br> <br>
+
+
+                                        <label for="dptmnt">Department:~</label>
+                                        <select name="Depart" id="dptmnt" >
+                                                            <option  disabled selected>select your department</option>
+                                                            <option value="CSE">  CSE </option>  
+                                                            <option value="CIVIL">CIVIL </option>
+                                                            <option value="Mechanical">Mechanical</option>
+                                                            
+                                                            
+                                                            <!-- jhaa mae type nae krta whaa value use hota hae value last mae name=Depart mae jayega -->
+
+                                        </select>
+                                        <br><br>
+                                        <button>SUBMIT</button>
+                    </form>
+</body>
+</html>
