@@ -1,0 +1,1030 @@
+<!-- observed speed issue if usng while tailwind i use externalcss -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModalMiniProject</title>
+    
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- had to use this font below in headings -->
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+
+    <!-- /close icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <style>
+
+
+
+
+
+/* 1 */
+ body {
+    /* 1 */
+    /* background-color: #010606; */
+    /* background-color: #e4d2af; */
+    
+    /* 2 */
+    /* background: rgb(47,240,140);
+
+    
+    /* 3 */
+    
+    /* background: radial-gradient(circle, rgb(168, 240, 204) 0%, rgb(243, 95, 240) 74%, rgba(255,0,135,1) 100%); */
+    background: rgb(111,121,239);
+    background: radial-gradient(circle, rgb(137, 218, 243) 0%, rgba(146,63,144,1) 74%, rgba(115,59,117,1) 100%);
+   
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    overflow-y: hidden;
+    overflow-x:hidden;
+  }
+  
+
+/* 2 */
+.topwrapper
+{
+    /* perspective: 5000px ; */
+    /* jeetna jyada utnaa z axis ke along/depth/away from screen */
+  
+    /* margin: 0; */
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+    /* background-color: rgb(205, 19, 19); */
+    
+    height: 100vh;
+    width: 100vw;
+    /*to bring card in center made top wrapper flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+/* 3 */
+.circle1 {
+    transform-style: preserve-3d;
+    transform: translateZ(-2020px) scale(0.6);
+
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+
+    /*x , y , spread , color ~syntax dropshadow*/
+  
+
+    border-radius: 100%;
+ 
+
+
+    background: linear-gradient(-25deg, #ffffff, #7b5579);
+    
+
+    /* /syntax x , y , blur, spread */
+    /* box-shadow: 18px 15px 25px 1px rgb(250, 249, 249),
+    -10px -15px 32px  3px rgb(178, 169, 166); */
+
+    box-shadow:10px 5px 35px 3px rgb(26, 25, 25),
+    -10px -5px 42px  1px rgb(218, 218, 214);
+
+
+    animation-name: kush-circlefirst;
+    animation-duration: 20s; /*animation start se end kitne der m khtm*/
+    animation-delay: 0ms;
+    animation-timing-function:alternate;
+    /* animation-iteration-count: 9; */
+  }
+@keyframes  kush-circlefirst /*maine kush-circle-sec bnaya bs or kush-circlefirst
+ke all values bs reverse krde all+ became -ve
+all -ve became +ve*/
+  {
+    0%
+    {
+        /* transform: translateY(0%); */
+        /* //size se rkhna h plus rukna nahi deekhana so used 0% */
+        width: 8em;
+        height: 8em;
+    }
+     /* top */
+    20%  
+    {
+        transform: translateY(250%) ;
+        
+        /* transform: scale(1); didnt used above + transform translateZ too,so no need to use here too..*/
+
+        width: 12em;
+        height: 12em;
+
+    }
+/* topleft */
+    40%
+    {
+        transform: translateX(220%) translateY(260%); /* ek saath lejana hoga
+        kuke space m aake top pr aake top left jaane mae space maths b lagega so y bhee if x  
+        but iske theek parallel mae need ne h bcz m already neeche aagya*/
+        
+        /* transform: scale(1); didnt used above + transform translateZ too,so no need to use here too..*/
+
+        width: 12em;
+        height: 12em;
+    }
+
+    60%
+    {
+        transform: translateY(0%) translateX(200%);
+        width: 12em;
+        height: 12em; 
+    }
+    100%
+    {
+        transform: translateX(0%) ;
+        width: 12em;
+        height: 12em;
+    }
+   
+
+  }
+
+
+
+
+
+
+
+  .circle2 {
+    /* position: fixed; */
+    position: absolute;
+    transform-style: preserve-3d;
+    /* transform: translateZ(-1820px) scale(0.8); */
+    transform: translateZ(-2020px) scale(0.7);
+    bottom: 5%;
+    right: 30%;
+    width: 19em;
+    height: 19em;
+    border-radius: 50%;
+    box-shadow: 0 0 100px #5648d8;
+    /* background: linear-gradient(-25deg, #d2d1d6, #8641f4); */
+    background: linear-gradient(-25deg, #ffffff, #f8a32b);
+    /* animation: circle2 Animate 8s infinite; */
+    animation-name: kush-circle-sec;
+    animation-duration: 20s; /*animation start se end kitne der m khtm*/
+    animation-delay: 0ms;
+    animation-timing-function:alternate;
+
+     /* /syntax x , y , blur, spread */
+     box-shadow: 10px 5px 35px 3px rgb(244, 4, 20),
+    -10px -5px 42px  1px rgb(248, 248, 96);
+  }
+
+
+
+
+
+  @keyframes kush-circle-sec
+{
+    0%
+    {
+        /* transform: translateY(0%); */
+        /* //size se rkhna h plus rukna nahi deekhana so used 0% */
+        width: 8em;
+        height: 8em;
+    }
+     /* top */
+    20%  
+    {
+        transform: translateY(-250%) ;
+        
+        /* transform: scale(1); didnt used above + transform translateZ too,so no need to use here too..*/
+
+        width: 12em;
+        height: 12em;
+
+    }
+/* topleft */
+    40%
+    {
+        transform: translateX(-220%) translateY(-260%); /* ek saath lejana hoga
+        kuke space m aake top pr aake top left jaane mae space maths b lagega so y bhee if x  
+        but iske theek parallel mae need ne h bcz m already neeche aagya*/
+        
+        /* transform: scale(1); didnt used above + transform translateZ too,so no need to use here too..*/
+
+        width: 12em;
+        height: 12em;
+    }
+    /* top bottom */
+    /* 60%
+    { */
+        /* transform: translateY(250%),translateX(-200%) ; ek saath lejana hoga */
+        
+        /* transform: scale(1); didnt used above + transform translateZ too,so no need to use here too..*/
+/* 
+        width: 12em;
+        height: 12em; 
+    } */
+    60%
+    {
+        transform: translateY(0%) translateX(-200%);
+        width: 12em;
+        height: 12em; 
+    }
+    100%
+    {
+        transform: translateX(0%) ;
+        width: 12em;
+        height: 12em;
+    }
+   
+}
+
+
+
+/* 4 */
+/* NOTE ~~>VVVVVVVIMP
+card m blur uske piche circle ke blur se aaya 
++ absolute positioning
++  backdrop-filter: blur(7px);*/
+.content_div /*minecode*/
+{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin  : cal()); */
+        
+
+        width: 350px;
+        height: 530px; 
+        /*****notenotenotenote----->scale property use krra so no need of this now*/
+        /* height: 650px; */
+        /* background: #de26261a; dont use transparency nahi show hoge bcoz
+        circle se blur show hora card pr*/
+        /* background: rgb(183, 154, 154); */
+        /* transform-style: preserve-3d; */
+        background: rgba(245, 242, 244, 0.19);
+        /* position: absolute; */
+        /* top: 130px; */
+        /* left: 750px; */
+        /* top:50%; */
+        /* left: 50%; */
+        /* width: 350px; */
+        /* height: 480px; */
+        border: 3px solid rgb(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+        
+        /*seen from mdn less value good blur
+        actual blur background me card ke piche*/
+
+        /* filter: drop-shadow(10 10mm 1mm  rgb(233, 46, 26));  */
+        /*is like shadow peeghlna element sae piche nae balki whee aajate
+        h shadow peeghlte hue
+        drop shadow means here-----> jha lgaya ye uske andr ke sb child + present element mae b lagega ye */
+
+
+        /* transform-style: preserve-3d; button to on 3d game jhaa 3d chaihye whaa use kro isko see more from parallax website */
+        /* border-radius: 108px;  */
+        /* height: 650px; */
+        /* width: 450px; */
+        /* overflow: hidden;  */
+    } 
+
+
+/*modern button ke time keeya thaa ye ~but abhi need ne h iske...*/
+
+.topwrapperblur::before
+{
+    content: "";
+    position: absolute;
+
+    height: 100vh;
+    width: 100vw; 
+    /* purae mae chaihyte muje thats why heigh and width leeya mae */
+    /* top: 100%;
+    left: 100%;
+    right: 100%;
+    bottom: 100%;  */
+    
+    backdrop-filter: 4px;
+    opacity: 75%;
+    background-color: rgb(168, 155, 155);
+    /* background-color: rgb(244, 142, 249); */
+}
+
+
+/*text ko overlap so hover lgaa sku*/
+.kheading
+{
+    cursor: pointer;
+    
+    /* fixed and without positon ne work krra card sae cheepak ya uske piche jaara hoga */
+    position: relative; /*middle b aagya nearest closest nonstatic ancestor ke*/
+    
+    left: 6px;
+    bottom: 100px;
+    /* z-index: 21000; */
+    /* font-size: 4px; */
+
+
+}
+/* .kheading:hover{ */
+    /* cursor: progress; */
+    /* background-color: red; */
+    /* z-index: 21000; */
+    /* position: absolute; */
+/* } */
+/* sharemyprofile bug */
+
+
+
+
+
+/* 5 */
+.new-font
+{
+    font-family: EB Garamond;
+    /* margin-top: 2110px; */
+    /* color: white; */
+}
+
+
+/* 6 */
+/* #FSTD  */
+/* { */
+    /* margin-left: 12vw; */
+/* } */
+.ok{
+    position: absolute;
+    left: 16px;
+    bottom: 160px;
+    /* z-index:1000; */
+}
+/* .ok:hover{ */
+    /* background-color: gray; */
+    /* transform: scale(1.3); */
+
+    /* transition; */
+/* } */
+
+/* 7 */
+.modal-div
+{
+    /* position:fixed; */
+    position:absolute;
+    z-index: 10001;
+    /* width: 28vw;
+    height: 25vh; */
+    width: 480px;
+    height: 210px;
+
+
+    /* background: black;~~ for blur/card color matter bhee krta h bhot */
+    /* background-color: #070505bf; */
+    background-color: #070505bf;
+    color: white;
+    backdrop-filter: blur(1px);
+    /* bottom: 220px; */
+    /* right: 2vw; */
+    top: 30vh;
+
+    color: white;
+    
+
+  
+    border-radius: 18px;
+      
+    
+    /* left:6%; */
+    /* top:60%; */
+
+    opacity: 0;
+    /* pointer-events: initial; */
+    /* cursor: pointer; */
+    
+    
+}
+
+
+.modal-div_ANIMATION
+{
+    /* animation: muje krte he nahi rehena balki specific phase pr chlana so using transition; */
+
+    transition-property:all ;
+    transition-timing-function: linear;
+    transition-delay: 0ms;
+    transition-duration: 0.189s;
+    /* transition */
+}
+
+
+
+
+/* #8 */
+
+/*not possible if i hover on something and it iwll blur diff elements
+and that element is above of [elementonwhichIhover]*/
+/* #shareProf:hover 
+{
+    filter: blur(10px);
+} */
+
+/* 9 */
+.unorderedlist-of-social-media-icons
+{
+    /* margin-left: 20%; */
+    width: inherit; /*i used inherit so i can make width acc to card
+    bcoz mae website flexible bnaunga future*/
+    /* background-color: inherit; */
+    /* gap:10%; */
+    
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    /* margin-bottom: 50%; top use kraa wa tailwind so no need of it */
+
+    
+
+    
+}
+
+/* {
+    } */
+    
+    /* 10th */
+/* .shareclass:hover .topwrapper + .modal-div{ can' be achieved had to use css */
+    /* filter: opacity(1); */
+    /* background-color: red; */
+
+/* } */
+
+
+
+/* 11 */
+
+.iconcross
+{
+    /* pointer-events: auto; */
+    /* pointer-events: none; i can stop pointer events by this property on someclass*/
+}
+.iconcross:hover
+/* .iconcross */
+{
+    transform: scale(1.3); 
+    color:rgb(255, 6, 6);
+    transition:  all 0.01s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* background-color: red; */
+    border-radius: 100%;
+
+    
+}
+ 
+/*removed hover coz handling by js*/
+/* .iconcross-red:hover */
+ /* .iconcross-red */
+/* { */
+    /* transition:  all 0.01s cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* transform: scale(1.3); */
+    /* background-image: url(icons8-cross-48.png); */
+    /* mr-4 ; mt-4 ; cursor-pointer; h-4 ;w-4 ~property previousiconcross */
+
+    /* margin-right: 4; */
+    /* margin-top: 4; */
+    /* cursor: pointer; */
+    /* height: 4px; */
+    /* width: 4px; */
+/* } */
+/* 12 */
+.icon-class:hover
+/* .icon-class */
+{
+    transform: scale(1.2);  
+    transition:  all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* background-color: rgb(36, 35, 35); */
+    /* color: black; */
+    border-radius: 100%;
+    
+}
+
+
+/* 10 */
+#shareProf:hover
+{
+    /* color dont work as internal tailwind priority > id of css */
+    transform: scale(1.1);
+    /* background-color: white; */
+    /* text-shadow: 2px 2px 3px rgb(250, 168, 225); */
+    filter: drop-shadow(2px 2px 3px rgb(127, 120, 120)); /*front mae shadow peeghlna of shadow*/
+    transition:  all 0.1s linear;
+    
+}
+
+/* 11 */
+#Follow:hover
+{
+    cursor: progress;
+    transform: scale(1.1);
+    /* background-color: white; */
+    /* text-shadow: 2px 2px 3px rgb(250, 168, 225); */
+    filter: drop-shadow(2px 2px 3px rgb(127, 120, 120)); /*front mae shadow peeghlna of shadow*/
+    transition:  all 0.1s linear;
+
+
+}
+
+/* 12 */
+/* .audioM */
+/* { */
+        /* display: block; */
+        /* border-radius: 800px; */
+        /* width: 190px; */
+        /* overflow: hidden; */
+        /* background: #f63f3f;    */
+     
+
+        /* position: absolute; */
+/* } */
+/* audio::-webkit-media-controls-panel { */
+  /* background-color: rgb(235, 247, 7); Changes the background of the control panel */
+  /* background-image: linear-gradient(10px 20px 10px red ); */
+  /* background-color: yellow; */
+  /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+
+
+} */
+/* audio::-webkit-media-controls-play-button { */
+  /* background-color: red; Changes the play button's background */
+  /* border-radius: 50%; Makes it circular */
+/* } */
+
+/* 13 */
+.playclasshover
+{
+    transform: scale(0.9);
+    transition: all 0.1s linear;
+    cursor: pointer;
+    /* position: absolute; */
+}
+/* 14 */
+.pauseclasshover 
+{
+    /* opacity: 1; */
+    transform: scale(0.9);
+    transition: all 8s linear;
+    cursor: pointer;
+    /* background-color: red; */
+    width: 100px;
+    /* position: absolute; */
+}
+
+/* 15 */
+.prev-button-pp
+{
+    position: fixed;
+    right: 810px;
+    /* justify-self: end; */
+    /* align-self: flex-end; */
+    /* flex-grow: 1; */
+    /* top: 20px; */
+}
+/* 16 */
+.next-button-nn
+{
+    /* position: relative; */
+    position: fixed;
+    left :800px;
+    /* top : 5.7px ; */
+    /* justify-self: end; */
+    /* align-self: end; */
+    /* flex-grow: -1; */
+    
+}
+
+/* 17 */
+.seek
+{
+    background-color: rgb(232, 223, 223);
+    height: 10px;
+    width: 200px;
+    position: relative;
+    top: 40px;
+}
+.sperm
+{
+    background-color: red;
+    /* height: 10px; */
+    /* width: 200px; */
+    position: absolute;
+    top: 40px;
+
+    animation-name: kushsperm;
+    /* animation-direction: linear; */
+    animation-delay: 0ms;
+    animation-duration: 1s;
+    animation-iteration-count: 9;
+    animation-direction: start;
+}
+
+@keyframes kushsperm
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+    }
+    50%
+    {
+        width: 10px;
+        height: 10px;   
+    }
+    100%
+    {
+        width: 200px;
+        height: 10px; 
+    }
+}
+
+
+</style>
+
+
+
+</head>
+
+<!-- junk -->
+    <!-- 1 -->
+    <!-- <div class="topwrapper ;  h-[100vh] ; w-[100vw]   "> -->
+        <!-- onclick="secoo()" -->
+        <!-- 2 circle div -->
+
+        <!-- 2.1 !onclick="secoo()"--css property upr krde -->
+
+
+
+
+<body>
+
+<!-- H    T        M        L   C O D E -->
+
+<!-- 1 -->
+         <div class="circle1">
+            <!-- <img src="moon.png" alt="not loading"> -->
+         </div>
+
+         <div class="circle2">
+            <!-- <img src="sun-and-moon.png" alt="not loading"> -->
+         </div>
+
+
+
+<!-- <div> -->
+      <!-- 2 -->
+          <!-- content-div /card-->
+         <!-- <div class="topwrapper bg-red-500 h-100% w-100% " > -->
+            <!-- whitem -->
+        <div class="topwrapper" >
+  
+                <div class="content_div  ; flex ; flex-col ; gap-y-16 ; p-10 ; border-2; border-green-200 ; rounded-xl ; items-center ; ">
+
+
+            <!-- 2.1 -->
+
+            <!-- div for image -->
+
+            <!-- <div class="image-div ;  rounded-full    ; ; h-[200px] ; w-[200px] ; relative ; z-[3]" > -->
+                <!--border-[3px] border-red-500   div se border htaa deeya-->
+
+                <!-- <img src="Anime-Girl3.png"  alt="error-notloading" class="mx-auto ; my-auto ;  h-[200px] ; w-[200px] ; rounded-full ; object-fill ; "> -->
+                <!-- <img src="https://images4.alphacoders.com/131/1311871.jpeg"  alt="error-notloading" class="mx-auto ; my-auto ;  h-[200px] ; w-[200px] ; rounded-full ; object-fill ; "> -->
+                 <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR72X_TG64qHNfAKHR_H9RD9bq1UayaRmf4Lw&s"  alt="error-notloading" class="mx-auto ; my-auto ;  h-[200px] ; w-[200px] ; rounded-full ; object-cover  ; opacity-90 "> -->
+                  <!-- <img src="https://encrypted-tbn0.gstatic.cimgom/images?q=tbn:ANd9GcSbLA7Buhsn03KgoHaeiLeTZmH7eTFiO1Nj8w&s" alt="error"  class="mx-auto ; my-auto ;  h-[200px] ; w-[200px] ; rounded-full ; object-cover  ;"> -->
+                  <!-- 2.1 -->
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIk1eQLapgkIEtIQ_e37jryIo2HU37UjAuvQ&s" alt="error"  class="mx-auto ; my-auto ;  h-[140px] ; w-[140px] ; rounded-full ; object-cover  ; mb-20 ">
+                  
+
+
+            <!-- </div> -->
+
+
+            <!-- 2.2 -->
+             <!-- heading div -->
+
+             <!-- <div class="heading-div relative z-[3]"> -->
+                 <!-- </div> -->
+                
+                
+                 <!-- 2.2 -->
+                  <div>
+                    <h2 class="kheading  ; new-font text-[30px] ; from-neutral-100 ; text-center ; font-[900] ; text-white ; cursor-pointer ;">Kush Bhardwaj</h1>
+                    </div>
+
+             
+             
+                        <!-- 2.3 -->
+                    <!-- 2nd heading div -->
+                     <!-- NO NEED OF DIV -->
+                    <div>
+                        <h3 class="ok  new-font text-slate-950 ; text-[21px] ; opacity-81 ;   font-[650] ; font-serif ;  cursor-pointer ;">
+                            <pre> Full-Stack WebDeveloper</pre>
+                        </h3>
+                    </div>
+                
+                <!-- 2.4 -->
+                <!-- div for buttons -->
+
+                <div class="div-for-two-buttons  gap-16 ; ">
+                    <!-- <div class="flex "> -->
+
+                    <!-- 1st button -->
+                   
+                    <button id="shareProf" onclick="kush()" class="absolute ; z-[30000] ; left-4 ; bottom-8 ;"   >
+                        <!-- 3.4,1) -->
+                        <!-- i tag fdevice-widthor icon -->
+                        <!-- <i></i> -->
+                        <!-- border-red-100 -->
+
+                        <!-- onmouseenter="kush()" onmouseleave="kushsec()"~~ are kinda async function -->
+                        <!-- onclick="kush()" -->
+                        <p class="shareclass new-font text-black ; text-[17px] ; opacity-60 ; font-serif ; font-semibold">
+                            Share My Profile
+                        </p>
+
+                    </button>
+
+            
+            
+            
+            
+            <!-- 2ndButton -->
+
+
+                        <button id="Follow" class="absolute ; z-[2000] ; right-4 ; bottom-8">
+                            <p class="new-font text-black ; text-[17px] ; opacity-60 ; font-serif ; font-semibold">
+                                Follow Me
+                            </p>
+                        </button>
+                    <!-- </div-for-two-buttons> -->
+                 </div>
+        
+        <!-- 4th point~~>modal on top of content div -->
+             
+                 <div  class="modal-div modal-div_ANIMATION">
+
+                    <!-- 4.1 -->
+                    <div class="modal-header created-parent-flex-to-place-child-flex-at-corners flex ; justify-between ; pl-4 ; pr-1">
+                        <!-- modal div ko absolute keeya maine ab iske content ko iske upr absolute krna h
+                                tbhi blur show hoga -->
+                                <!-- 4.1 -->
+                                <!-- ml-4 ; mt-3 ;  -->
+
+                                <!-- childflex1 -->
+
+                                <!-- child item1st -->
+                                <!-- padding not working in heaidng coz its child flex and on it property applied is ~~> justify between -->
+                        
+                                
+                            <div>
+                                <h2  style="font-family: EB Garamond" class=" text-white ; text-3xl ; font-bold ; mt-4 ">
+                                    Share My Profile
+                                </h2> 
+                            </div>
+
+                            <!-- child item/flex2 -->
+                            <!-- onclick="closeModal()" -->
+                             <div>
+                                <i  class="iconcross fa fa-close text-white mr-4 mt-4 ; cursor-pointer"></i>
+                             <!-- <img class="crs" onmouseover="CROSS_ICON()" src="icons8-cross-30.png" alt="notloading" class="iconcross iconcross-red text-white mr-4 ; mt-4 ; cursor-pointer; h-2 ;w-4"> -->
+                              </div>
+                            
+
+                        </div>
+                        
+                        
+                        <!--4.2) </div> for line it is-->
+        
+                        <!-- made flex to place line ek dm beecho beech -->
+                        <div class="flex ; justify-center ; items-center">
+                            <div class=" fixed ; z-30 ; text-gray2 ; text-4xl ; font-bold ;    bg-gray-400 ; h-[1.4px] ; w-[26vw] ; top-14 ; opacity-85"> 
+        
+                            </div>
+                        </div>
+                    
+            
+
+
+            <!-- 4.3 --> 
+             <p style=" font-family: EB Garamond" class="  fixed ; top-1 ;  z-30 ; text-white ; text-2xl ; font-bold ;  pl-4 ; mt-14 ; pt-2" >
+                Share this via
+
+             </p>
+
+            
+             <!-- 4.4 all icons -->
+          
+        <div class="all-icons">                 
+      
+            <ul class="unorderedlist-of-social-media-icons flex ;flex-row ; justify-evenly ; pt-20">
+            <!-- bg-red-500 ; used in list for viewing where list is.. -->
+           
+           
+           
+           
+            <!-- fb -->
+                <li class="icon-class " >
+                    <!-- link anchor tag -->
+                   <a href="#f">
+                    <!-- i for icon refrence from internet -->
+                    <!-- <i class="fa fa-facebook"> -->
+
+                    <!-- </i> -->
+
+                    <img src="facebook.png" alt="not-loaded-icons" class="h-11 ; border-1 ;  rounded-[100%] ; p-1 ; hover:bg-blue-100">
+                   </a> 
+                </li>
+
+
+                <!-- INsta -->
+                
+                <li class="icon-class">
+                    <a href="#I">
+                        <!-- <i class="fa fa-rss"> -->
+
+                        <!-- </i> -->
+
+                        <img src="instagram.png" alt="not-loaded-icons" class="h-11 ; border-1 ; rounded-[100%] ; p-1 ; hover:bg-red-600" >
+                    </a>
+                </li>
+                
+               
+                <!-- twitter -->
+                <li class="icon-class">
+                    <a href="#T">
+                        <!-- <i class="fa fa-twitter"> -->
+
+                        <!-- </i> -->
+                         <img src="twitter.png" alt="not-loaded-icons" class="h-11 ; border-1 ; rounded-[100%] ; p-1 ; hover:bg-gray-500">
+                    </a>
+                </li>
+                
+                <!-- TG -->
+                <li class="icon-class">
+                    <a href="#YT">
+                        <!-- <li class="fa fa-youtube"> -->
+
+                        <!-- </li> -->
+                         <img src="telegram.png" alt="not-loaded-icons" class="h-11 ; border-1 ;  rounded-[100%] ; p-1 ; hover:bg-blue-100">
+                    </a>
+                </li>
+
+                <!-- linkedin -->
+                <li class="icon-class">
+                    <a href="#Linked">
+                        <!-- <li class="fa fa-linkedin"> -->
+
+                        <!-- </li> -->
+                         <img src="linkedin.png" alt="not-loaded-icons" class="h-11 ; border-1 ;  rounded-[100%] ; p-1 ; hover:bg-blue-100">
+                    </a>
+                </li>
+           
+            </ul>
+        </div>
+
+        
+
+        <!-- no need of this babbar way -->
+        <!-- <div class="overlay" onclick="CloseModal()">
+        </div> -->
+
+
+                </div>
+                
+                </div>
+<!-- 1st audio -->
+<audio id="myAudio" src="ek-din-pyaar-instrumental-reprodby---cjchiragbeatz.mp3"></audio>
+
+<!-- 2nd audio -->
+ <audio id="myAudioSec" src="krsna--lyrical-edit--seedhe-maut-shorts-seedhemaut-lunchbreak-khattaflow-krsna.mp3"></audio>
+
+ <!-- 3rd audio -->
+ <audio id="myAudioThird" src="hanji-hanji-dedo--arpitbaala-music--knight-digle.mp3"></audio>
+    
+
+ <!-- 4th audio -->
+ <audio id="myAudioFourth" src="Khatta Flow(KoshalWorld.Com).mp3"></audio>
+
+ <!-- 5th audio -->
+
+ <audio id="myAudioFifth" src="Hola Amigo(KoshalWorld.Com).mp3"></audio>
+ 
+ <div class="audio_parent_div  flex ; justify-center ; items-center ; absolute ; bottom-12 ; w-[20%] ">
+    <!-- bg-red-400 ; -->
+
+        <!-- bottom-48 -->
+
+
+        <!-- <input type="range" id="seek" value="0" /> -->
+        <!-- prev -->
+        <button class="prev-button-pp ; opacity-90 ; cursor-pointer ;">
+            <img src="arrow-left (2).png" alt="notloaded" height="50px" width="50px" ; class="prev_button  ; opacity-40 ; cursor-pointer   ;" >
+        </button>
+        
+      
+
+        <!-- next -->
+         <button class="next-button-nn ; opacity-90 ; cursor-pointer ;">
+            <!-- next button size seems little more than prev so used [h and w ==47pixels] -->
+            <img src="right-arrow (1).png" alt="notloaded" height="50px" width="50px" ; class="next_button ; opacity-40 ; cursor-pointer    ;">
+        </button>
+
+
+        <!-- 5.1 seek bar-->
+        <div class="seek" >
+                
+        </div>
+        <div class="sperm">
+
+        </div>
+    </div>
+
+        </div>
+ 
+
+
+
+
+
+
+
+        <!-- //******************************************************* -->
+            <!-- 4th point~~>modal on top of content div -->
+
+            <!-- <div class="div-for-modal-bg-making-it-more-beautiful-with-div-as-bg-card bg-red-600 ; h-[300px] ; w-[500px]"> -->
+
+
+                
+           
+
+                
+                
+                <!--**made absolute bcoz above else stufff aree too absolute
+ and flex bcoz i want flex-child audio to be centered in page-->
+     
+
+
+<!-- </div>
+
+<div class=" flex ; justify-center ; items-center">
+    <audio controls class="audioM absolute ; bottom-7 ">
+
+        <source src="ek-din-pyaar-instrumental-reprodby---cjchiragbeatz.mp3" type="audio/mp3">
+    </audio>
+</div> -->
+<!-- audio selfmade -->
+
+
+<!-- <audio id="myAudio" src="ek-din-pyaar-instrumental-reprodby---cjchiragbeatz.mp3"></audio>
+<div class="custom-player">
+  <button id="playpause">Play/Pause</button>
+  <input type="range" id="seek" value="0" />
+  <button id="mute">Mute</button>
+</div> -->
+
+
+<!-- 5 -->
+<!-- self made audio played -->
+
+<!-- 1 -->
+    
+           
+            
+    
+    
+    <!-- <img src="previous.png" alt="notloaded" height="50px" width="50px" ; class="prev_button  ; opacity-40 ; cursor-pointer   ;" >
+    <img src="next-action.png" alt="notloaded" height="50px" width="50px" ; class="next_button ; opacity-40 ; cursor-pointer    ; "> -->
+
+
+
+    
+<script src="scripts.js"></script>
+ 
+<!-- <script src="RevisionJsDy1-to-4.js"></script> -->
+
+</body>
+
+</html>
+
+
+<!-- linkedlist in js tomorrow for front and back -->
+ <!-- will do in c++ too first -->
+
+ <!-- first lets perform with simple array -->
+
+ <!-- let array_of_all_array = [] IN JS-->
