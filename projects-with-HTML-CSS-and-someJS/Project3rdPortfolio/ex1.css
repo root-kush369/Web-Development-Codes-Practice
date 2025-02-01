@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading
+{
+    border: 2px solid black;
+    transition: all 1ms;
+
+}
+.heading:hover
+{
+    /* background-color: red; */
+    text-align: center;
+    color: purple;
+    cursor: pointer;
+    transform: scale(2);
+}

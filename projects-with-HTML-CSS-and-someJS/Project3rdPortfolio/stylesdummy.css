@@ -1,0 +1,2059 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+
+}
+:root
+{
+    --bgOrange:#e84949; /*global variable*/
+}
+/*its property for 1st   */
+#wrapper
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    border: 8px solid rgb(0, 225, 255);
+}
+
+/* -------------------------------------------------------------------------- */
+/* PART1 */
+/* -------------------------------------------------------------------------- */
+/* property for 2nd */
+.container
+{
+    border: 6px solid black;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* property for 3rd */
+
+/* f1) 1ST TIME USED FLEX */
+/*navbar section started  */
+.navbar
+{
+    display: flex;
+    border: 2px solid red;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:  1rem;/*ui/ux designer btaadega ye muje*/
+    
+}
+
+/* f1->(1) nested flex inside f1) */
+/* 3.1 */
+.logocontainer{
+    display: flex;
+    border: 2px solid yellow; /*i take border to see positioning of flex*/
+ 
+    justify-content:baseline;
+    align-items: center;
+    /* margin: -12rem; */
+}
+
+.logoimg{
+    width: 80px;
+}
+.logotext
+{
+    font-size: 28px;
+    margin-left: -1.2rem;
+    font-weight: 400;
+    
+}
+
+
+
+
+/*property for 4 */
+
+/* f1->(2) nested flex inside f1) */
+.nav-link-parent
+{
+    border: 2px solid purple;
+    display: flex;
+    gap:2rem;
+    padding: 0 4rem;/*given by ui/ux designer*/
+
+}
+
+.nav-link-parent div
+{
+    font-size: 20px;
+    font-weight: 500;
+    /* color: black;i want to do anchor tag black not div so dont use here */
+    cursor: pointer;
+    transition: div 2s ease 1ms; /*all bad practice*/
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.nav-link-parent div :hover
+{
+    font-weight: bolder;
+    transition: 0.8s;
+}
+/*navbar section ended  */
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/* part2  hero section started*/
+/* -------------------------------------------------------------------------- */
+
+/*F2) FLEX USED 2ND TIME*/
+.hero-section
+{
+    
+    display: flex; /*so horizontally /flex-direction:row hojaye*/
+    border: 8px solid green;
+    position: relative;
+     /*bs faded text ko maine position krna green box ke andr means faded text ke class absoluet hae to usko
+    mai overlap krna chaunga nearest ancestor sae and wo ye box rkhna h agr muje to isko muje relative rkhna hae else no need
+    
+    wesae needed ne h*/
+
+    /* left bcoz horizontally chahta hu m */
+    justify-content: center;
+     /*taki content acha lage*/
+    align-items:center;
+
+    /* these values given by ui ux designer */
+    gap:5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    /* these values given by ui ux designer */
+
+}
+
+.faded-text
+{
+    position: absolute;
+    user-select: none;
+    font-size: 7rem;
+    color: rgb(231,231,231);
+    
+    /* these values given by ui ux designer */
+    bottom:-2% ;
+    left: 1%;
+    font-weight: bold;
+    transition: 3s all;
+    /* these values given by ui ux designer */
+
+    /* align-self:last baseline; */
+    /* align-self: flex-end; */
+    /* align-self: last baseline; */
+    
+    
+}
+
+/*F2 point(1) NESTED FLEX INSIDE 2ND FLEX*/
+/* or f2 point1 can be said as subpartF2.1 */
+.herosection-left
+{
+    border: 2px solid brown;
+    display: flex; /*hero section left ke andr mere 4 div hae diff unko muje column wise place krna haalki wo by default hae he but agr muje flex
+    ke koe property use krne like @1x11 below than i made it as flex*/
+  
+    flex-direction: column; /*column by default rehta hai but js center alignitem center ke leeye use krdiya display:flex*/
+
+    justify-content: center; /*@1x11 parent flex property*/
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+
+
+
+/*sub-subpart 2.1 -->further flex-items part  */
+.hero-section-heading
+{
+
+     /* these values given by ui ux designer */
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+     /* these values given by ui ux designer */
+}
+
+
+/*subpart 2.2 further flex-items part  */
+.role{ /*tabhi deeya role so running text ko color kr paun mae*/
+
+        
+     /* these values given by ui ux designer */
+        color: #d54592;
+        font-weight: 800;
+         /* these values given by ui ux designer */
+}
+
+
+.hero-section-subheading /*2nd wala flexitems of herosection left usmae lgjayega yae*/
+{
+     /* these values given by ui ux designer */
+    font-size: 45px;
+    line-height: 45px;
+     /* these values given by ui ux designer */
+
+     /* BUT I KNOW WHERE AND HOW TO DO IT THATS MAIN AS WEB DEVELOPER */
+}
+
+
+/*subpart 2.3 further flex-items part  */
+.hero-section-description
+{
+     /* these values given by ui ux designer */
+
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 70%;
+    font-size:22px;
+     /* these values given by ui ux designer */
+}
+
+ .pinkbtn
+{
+    font-size: 38px;
+    font-weight: 500;
+    background-color: rgb(219, 234, 221);
+    border-radius: 2%; 
+    display: inline-block;
+    
+    /* width: fit-content; 
+    /*div size == content (like dynamically increase)*/
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border: 1.2px solid black transparent; 
+
+    /* given by my ui/ux designer just read and paste */
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+
+ }
+.pinkbtn::before
+{
+    content: ""; 
+    background-color: rgb(54, 46, 46); /* color ke jgaah gradient use krra hu */
+    background-image:radial-gradient(#df6262  , #e69dc3); 
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: transform 0.4s ease-in 1ms;
+} 
+.pinkbtn:hover::before
+{
+    transform: scaleX(1);
+    transition: 3s;
+    border-radius: 2%;
+    
+} 
+
+
+
+/* -------------------------------------- */
+/* /* subpart2.2 */
+/* -------------------------------------- */
+
+.herosectionright
+{
+    position: relative; /*bcoz muje 5-6 icons or images ismae bhot se image overlap krwane hae herosection right wale div pr*/
+    /* z-index: -1; */
+    border: 3px solid skyblue;
+    padding: 2rem;
+    /* background-color: red; */
+    /* padding: 2rem; */
+    /* width:1200px; */
+}
+.absolute
+{
+    position: absolute; /** so all images khud absolute overlap hojaye image pr  it sees nearest ancestor thats why done for herosection right as relative/
+    /* z-index: 1; */
+
+}
+
+/* sub sub part 2.2 point1 [1stimage] */
+
+
+.user-image
+{ 
+    padding: 2.5rem; /*white patti image se andr ke trf*/
+    /* filter: grayscale(1);  */
+    /*write 1 or 100% same*/
+    /* transition: all 1s;  */
+    /*means  userimage ke upr koe b property lgaunga un sb pr transition lagega 
+    syntax is[[[ property|| timetochange transition from origional to new state || transition-timing-function ease in ||transition-delaytime(means after how long to start it) ]]*/
+
+    animation-name: scaleImage;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction:linear or alternate-reverse; no need of this  why??
+    /*scale ko maine 1 1 rkha wa least and max pr with animation iteration count infinite that creates kinda animation-direction as linear*/ 
+    animation-delay: 1ms;
+    
+
+    /* animation: scaleImage  5s linear infinite; */
+    z-index: -4;
+}
+
+@keyframes scaleImage
+{
+    /* these 0% 50 % 100% these are not width or height
+    these are just assumable percentage of animation
+    means 0 %animation pr kya hoga
+    50% kya
+    and 
+    100 % pr kya */
+    0% /*0 % to 100% is from andrr to bhaar
+    so dont link or try to combine it with concept of scaleX or scaleY*/
+    {
+        filter: grayscale(0);
+        transform:scale(1);
+        /* box-shadow: 3px 3px 10px rgb(111, 108, 108) ; */
+        box-shadow: 3px 3px 10px black ;
+        
+    }
+    50%
+    {
+        filter: grayscale(1);
+        transform:scale(1.1);
+        box-shadow: 3px 3px 10px rgb(235, 235, 235) ;
+    }
+    100%
+    {
+        transform:scale(1); /*scale ko maine 1 1 rkha wa least and max pr with animation iteration count infinite that creates kinda animation-direction as linear*/
+        filter: grayscale(0);
+        /* box-shadow: 3px 3px 10px rgb(225, 90, 90) ; */
+
+        box-shadow: 3px 3px 10px rgb(72, 68, 68) ;
+
+    }
+}
+
+/* sub sub part 2.2 point2 [next image/icon] */
+.icon-dots
+{
+    z-index: 1;
+    
+    
+    /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    bottom: -1rem;
+    right: 0;
+    /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+
+
+
+    animation-name: icon-dots-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-direction: linear; no need of this*/
+}
+
+/* scale translate sae movement animation so ek state sae dusre state 0 % 50% 100% mai changes laata rahu */
+@keyframes  icon-dots-animation /*i can add 5-6 key frames 0 10 20..100% like this*/
+    {
+    0%
+    {
+        transform : translatey(0px)
+    }
+
+    50%
+    {
+        transform : translatey(-15px) /*niche in -y axis*/
+    }
+    100%
+    {
+        transform : translatey(0px)
+    }
+}
+
+.icon-cube
+{
+    z-index: 1;
+     /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    top: -0.8em;    
+    right: 1em;
+     /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    animation-name:icon-cube-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction:linear; no need */
+    
+
+}
+@keyframes icon-cube-animation
+{
+    0%
+    {
+        /* translate and scale need perspective but rotatez dont need perspective bcoz wo apne axis pr he ghumega */
+        transform: rotateY(0deg) translateY(0px); /*rotate y done bcoz y axis pr ghumra ye*/
+    }
+    50%
+    {
+        transform:rotateY(180deg) translateY(-12px);
+    }
+    100%
+    {
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+
+.icon-circle
+{
+    z-index: 1;
+    /* bottom: 8rem; */
+    /* right: 33rem; */
+    left: 0;
+    bottom: 0;
+    animation-name: circle-icon-shakeEffect;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction: linear ; no need */
+}
+@keyframes circle-icon-shakeEffect{
+
+    /*i can use translate x or left bottom too bcoz this images are absolute so i can use these property as herosectionRight is relative now  */
+    0%
+    {
+        left: 0;
+        bottom: 0;
+    }
+    50%
+    {
+        left: 5%;
+        bottom: 10%;
+    }
+    100%
+    {
+        left: 0;
+        bottom: 0;
+    
+    }
+}
+
+.icon-zigzag
+{
+    z-index: 1;
+    
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    top: 1.5em;
+    left: -0.3em;
+    /* VIMP ---- if i dont set uo top and left position no doubt images are at its place but when i apply top right positioning in animation */
+    /* its top means top sae ,right means -> right sae , left means-> left sae and bottom means bottom sae so it gonna messed up. ----VIMP */
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    animation-name: zigzagAnimation;
+    animation-duration: 4s;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zigzagAnimation{
+
+    0%
+    {
+        top: 0%;
+        left: 0%;
+        /* bottom: 0%; */
+    }
+    50%
+    {
+        top: 5%;
+        left: 10%;
+        /* bottom: 100%; */
+    }
+    100%
+    {
+        top: 0%;
+        left: 0%;
+    
+    }
+}
+
+
+
+.icon-plus
+{
+    z-index: 1;
+    
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    top: -0.8rem;
+    left: 50%;
+   
+   
+   
+    /* VIMP ---- if i dont set uo top and left position no doubt images are at its place but when i apply top right positioning in animation */
+    /* IT MEANS US WALE POSITION SAE IDHR UDHR HOJANA
+    NAKI UDHR EXACTLY PLACE KRNA SO ->>>>its top means top sae ,right means -> right sae , left means-> left sae and bottom means bottom sae so it gonna messed up. ----VIMP */
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+   
+   
+    animation-name: iconplus-shakeEffect;
+    animation-duration: 2s;
+    /* animation-direction: linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+
+}
+
+@keyframes iconplus-shakeEffect {
+
+    0% 
+    {
+        top: 0%;
+        left:44%; /*left isiliye use keeya maine bcoz image ko beech mae place keeya left ke help sae he*/
+    }
+    
+    50%
+    {
+        top: 3%;
+       left: 50%;
+    }
+     100%
+    {
+        top: 0%;
+        left: 44%;
+    
+    } 
+}
+/*hero section ended here  */
+
+/* /rem and em best units for responsive websites/ */
+
+/******************************************************************************************  */
+
+/* part3 css starts */
+.projectsection /*khaaas need ne the iske bcoz margin top mai individually use krleta page-header m and project-container containing all cards
+but chlo page-header and project-container ko wrapped up krleeya isnae*/
+{
+    background-color: rgb(231, 231,231);
+    border: 10px solid darkmagenta;
+    margin-top: 4rem;
+}
+/* part3.1 */
+.page-header
+{
+    border: 8px solid yellow;
+    text-align: center;
+    color: var(--bgOrange);
+    font-size: 90px;
+    padding-top: 30px;
+}
+
+
+/*f3) FLEX USED 3RD TIME BCOZ IS BADE PROJECT CONTAINER MAE SAARE CARD HAE OR UNKO COLUMN WISE PLACE KRNA JO KE BYDEFAULT B HOSKTA HAE JUST INCASE
+POSITIONING KRNE HO SO WHAA FLEX USED HUA */
+/* part3,2 */
+.project-container
+{
+    border: 8px solid black;
+    max-width: 1200px; /*max expanding till 1st part i.e navbar*/
+    margin: 0 auto; /*bilkul beech m aagya*/
+    padding: 3rem 0;
+
+    display: flex; /*so sb container ke cheezo pr mai property lgaa sku or column wise to by default hai ye but rkhna pdega bcoz after flex,
+    flex items get arranged horizontally i.e flex-direction:row acc to mainaxis
+    BUT BY THIS ALL CARDS ARE BEING VERTICALL*/
+    flex-direction: column; 
+    gap:120px;
+}
+
+/* NOTE IMP MINE OBSERVATION */
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/*remember when using flex remember flex apply from parent to its child not to child's further child and child*/ 
+/* NOTE IMP MINE OBSERVATION */
+
+
+
+/* part3.2 pointsa...z start */
+
+/* ************************* */
+/* before a */
+
+
+
+.project-card /*containing bg image and used its position relative so i can used icon as position absolute on it and 
+project number too can be placed overlapped on it*/
+{
+    z-index: 0;
+
+    border: 8px solid rgb(29, 223, 248);
+    width: 90%;
+    height: 550px;
+    /* background-image: url(./Project22.png);   */
+    /* background-position: center; this is making mess with center */
+    background-size: cover;/*fit images to width or div it is in means  image cover that div fully*/
+    background-repeat: no-repeat; /*image fit hone ke leeye repeat ne hoge*/
+
+
+    position: relative;/*bcoz muje iske upr images ko float krwna h*/
+    box-shadow: 0px 0px 40px #1f1f1f;
+    /* background-color: #1f1f1f9a;/point@113/ */
+
+}
+.project-card::after
+{
+    /* content: "kushbhaf"; content is like a key to unlock every property must and compulsory! */
+    content: ""; /*content is like a key to unlock every property must and compulsory!*/
+    position: absolute ; /* after used abd absolute bcoz muje color  ko upr float krwana h card wale image ke thats why used project-card:after
+    but uske upr icons aane hae so used absolute*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+    cursor: pointer;
+    background-color: #1f1f1f9a; 
+    z-index: 1;
+   
+
+   
+    
+   
+}
+/* .project-card:hover::after */
+/* { */
+    /* content:"kushbhardwaj"; */
+    /* background-color:white;  */
+/* } */
+.project-card::before
+{
+    /* content: "sharma"; */
+    content: "";
+    position: absolute ; /*bcoz muje  project-cad wali image hae uskae just piche rkhna hae color to whaa before kaam aayega
+    means image ke just piche but div  ke just aagae else if i use in project-card  
+     tried in @113 above but i want project card pr jo image hae uskae baad thats why after
+    if i will set background-color: black in card that will go behind piche of image*/
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(45deg ,#343d68 , #343d68be ,#343d887c);
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition-property: transform ;
+    transition-duration: 1s;
+    transition-delay: 1ms;
+    transition-timing-function: ease;
+    cursor: pointer;
+    
+    z-index: 0;
+}
+
+.project-card:hover::before
+{
+    transform: scaleX(1);
+}
+/* 
+    The background property is a shorthand property for:
+
+    background-color
+    background-image
+    background-position
+    background-size
+    background-repeat
+    background-origin
+    background-clip
+    background-attachment */
+
+/* } */
+
+
+/* ************************* */
+
+
+/* ************************* */
+/* a */
+
+.projectnumber
+{
+    position: absolute;
+     /*sae width mae control aajata hae  == content idk may be it becomes inline-block or inline diff is for inline block i can set as width and height
+     but  [not if div is display:inline]*/
+     /* display: inline-block; */
+    font-size: 200px;
+    font-weight: 600;
+    color: rgb(255,255,255);
+    /* right: 150px; */
+    /* z-index: 2;  */
+    
+    /* height: 20px; */
+    /* width: 60px; */
+    /* background-color: red ; */
+    
+    display:none; 
+    /*bcoz card pr hover krne pr aana chaihye*/
+    background-color: rgba(19, 191, 221, 2);
+    z-index: 12; /*jo slidecolor aara hae in before a part uske upr rkhna h muje ye so*/
+  
+   
+
+}
+
+.projectnumber::before
+{
+    content: "";
+    background-color: rgba(241, 60, 44,0.7);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -12;
+    transform: scaleX(0);
+    transition: transform 1s;
+    transform-origin: left;
+}
+
+/*its pronounced and worked as [projectcard pr jb hover krna tb kis class mae kya krna ya kis id mae kya krna]*/
+.project-card:hover .projectnumber 
+{
+    display: block;
+    /* background-color: rgba(136, 174, 181, 0.3); */
+}
+
+
+/* agr mai transition b na lgau bcoz maine hover use keeya than b wo work krega */
+.projectnumber:hover::before
+{
+    transform: scaleX(1);
+
+} 
+
+.rightnumber /*taken multiple class name with projectnumber bcoz i want to set property for 2leftNumber and 2RightNumber*/
+{   
+    right: 40px; /*note used already position absolute is 1st projectnumber div so apply here too that is why i can use right :40px and top property*/
+    top:-45px
+}
+
+.leftnumber
+{
+    left: 40px;
+    top: -45px;
+}
+/* ************************* */
+
+
+
+/* F4 used flex 4th time 
+BCOZ IS PROJECT-CONTENT BOX MAE SARE IMAGES HAE 
+SKILLS
+HEADING
+SUBHEADING 
+BUTTONS HAE
+IN SBKO COLUMN WISE PLACE KRNA
++ halaaki need ne hae bcoz by default wo column wise he place hojaynge*/
+/* part3.2 pointb  */
+.project-content{  
+    
+    border: 4px solid rgb(193, 228, 18);
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 2; /*bcoz muje card ke upr rkhna hae ye box that is project-card ke */
+    gap: 1em;
+    position: absolute;  /*by this every thing inside project contenr a to d 4 items will overlap too on top of project-card*/
+    /*bcoz is box ko b muje overlap krna hae project card pr*/
+    
+    
+    /* justify-content: center;
+    align-items: center; */
+    display: flex; 
+    /*bcoz muje is box ke upr parent flex ke upr icons ke positioning krne hae column wise + agr parent flex property ke need hue to wo be use krlungaf*/
+    flex-direction: column;
+    
+    background-color: red;
+     /* height: 100%;  */
+    /* width: 100%; */
+    /* height and width == entire width of project card bcoz project-content is inside
+    project-card but since i used position absolute so wo oeverlapp krdega and uske width height ab wo stick nae kreha project-card ke rather
+    overlap krega project card pr
+     div by default*/
+    /* also being position absolute its overlapped on top of [project card as its relative] */ 
+
+
+
+    /* need while hovering ->when hover on project-content div so icon will scale in X Y Z axis
+    see below in @119 point below */
+    transition-property: transform ;
+    transition-duration: 0.1s;
+    /* transition-delay: 1ms ; */
+    transition-timing-function: ease-in;
+    /* need while hovering */
+
+
+
+}
+
+.leftProjectContent
+{
+    left:10%
+}
+.rightProjectContent
+{
+    right: 10%;
+}
+/* .project-skills-container */
+/* { */
+    /* position: absolute; */
+/* } */
+
+/* f5) flex used 5time for flex-wrap : wrap  */
+/*USED WRAP HERE ONLY NOT ANY WHERE ELSE*/
+.project-skills-container /* made it flex(used flex 2nd time) */
+{
+    background-color: yellow;
+    border: 8px solid black;
+    
+    /* beenaa flex-wrap ke b hojaara squeeze icons */
+    display: flex;
+    flex-wrap: wrap;
+    /* beenaa flex-wrap ke b hojaara squeeze icons  MAY BE BCOZ I USED FLEX ABOVE PROBABLY*/
+    gap: 10px;
+    width: 60%
+}
+/* .project-skills-container img containing images */
+/* .project-skills-container img containing images */
+.project-skills-container img /*containing images*/
+{
+    /* height: 40px; */
+    width: 40px;
+    /* z-index: 20; */
+}
+
+/* part3.2 pointb.b  */
+
+.project-heading
+{
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 3rem;
+    right: 70%; /*wont work as here position property not used,only used on project-content box*/
+}
+
+/* part3.2 pointc  */
+.project-subheading
+{
+width: 70%;
+border: 2px solid black;
+font-size: 16px;
+font-style: italic;
+
+}
+/* f5 means flex5 */
+/* f5) flexused 5th time */
+.button-and-icon
+{
+    border: 4px solid whitesmoke;
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+
+    /* justify-content: ; */
+    /* justify-content: baseline; */
+
+
+
+}
+.secondclassbtn:hover{
+    border: none;
+}
+
+
+.icon
+{
+    color:white;
+    cursor: pointer;
+    /* border: 12px solid black; */
+    /* width: 40px; */
+    font-size: 45px ;
+    transition-property: color; /*all means on which property write color or all and all means all propertt inside icon and stuff inside it*/
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 1ms ;
+}
+
+.icon:hover
+{
+    color:var(--bgOrange);
+}
+
+/* project container na he project card
+use project-content div */
+/* .project-card:hover
+{
+    transform: scale(1.3);
+} */
+
+
+
+/* point @119*/
+.project-card:hover .project-content
+{
+    transform: scale(1.1); /*it scale in X Y Z axis all*/
+    
+}
+ /* project container na he project card
+use project-content div */
+
+
+/* point3.2 [point isbefore a]  */
+#project1
+{
+    background-image: url(./images/projects/Project1.png);
+    
+}
+#project2
+{
+    background-image: url(./images/projects/Project2.png);
+    margin-left: 120px;
+}
+#project3
+{
+    background-image: url(./images/projects/Project3.png);
+}
+#project4
+{
+    background-image: url(./images/projects/Project4.png);
+    margin-left: 120px;
+}
+
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+/******************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS STARTED */
+
+/* luckily i chosen 400 px acc to my redmi k50i */
+@media(max-width: 400px)
+{
+    .container
+    {
+        border: 6px solid rgb(211, 36, 118);
+        width: max-content;
+        /* height: 800px; */
+        margin: 0 auto;
+    
+    }
+
+/* .logocontainer */
+/* { */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+/* } */
+.navbar
+{
+    /* flex-direction: column; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: start; */
+    /* align-items: start; */
+    /* flex-shrink: 2; */
+    border: 2px solid red;
+    /* margin: 10px; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding-top:  1rem;/*ui/ux designer btaadega ye muje*/
+    gap: 18px;
+}
+
+.nav-link-parent
+{
+   /*  */
+}
+.logocontainer{
+    /* display: flex; */
+    border: 2px solid yellow; /*i take border to see positioning of flex*/
+ 
+    /* justify-content:baseline; */
+    /* align-items: center; */
+    /* margin: -12rem; */
+}
+
+.logoimg{
+    width: 2.4rem;
+    /* width: 10%; */
+}
+.logotext
+{
+    /* font-size: 28px; */
+    font-size: 1.4rem;
+    margin-left: -0.6rem;
+    font-weight: 400;
+    
+}
+
+
+/*property for 4 */
+
+/* f1->(2) nested flex inside f1) */
+.nav-link-parent
+{
+    width: 100px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* flex-direction: column; */
+    border: 2px solid purple;
+    justify-content: start;
+    align-items: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* gap:2rem; */
+    /* padding: 0 4rem;given by ui/ux designer */
+
+}
+
+.nav-link-parent div
+{
+    /* font-size: 1px; */
+    font-weight: 500;
+    /* color: black;i want to do anchor tag black not div so dont use here */
+    cursor: pointer;
+    transition: div 2s ease 1ms; /*all bad practice*/
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.nav-link-parent div :hover
+{
+    font-weight: bolder;
+    transition: 0.8s;
+}
+/*navbar section ended here   */
+/* **************************************************************************************** */
+/* **************************************************************************************** */
+/* -------------------------------------------------------------------------- */
+/* part2  hero section started*/
+/* -------------------------------------------------------------------------- */
+
+/*F2) FLEX USED 2ND TIME*/
+.hero-section
+{
+    
+    display: flex; /*so vertical place kru flex-direction:column sae /flex-direction:row hojaye*/
+    /* flex-direction: column; */
+    border: 8px solid green;
+    position: relative;
+    
+    flex-wrap: wrap;
+     /*bs faded text ko maine position krna green box ke andr means faded text ke class absoluet hae to usko
+    mai overlap krna chaunga nearest ancestor sae and wo ye box rkhna h agr muje to isko muje relative rkhna hae else no need
+    
+    wesae needed ne h*/
+
+    /* left bcoz horizontally chahta hu m */
+    justify-content: center;
+     /*taki content acha lage*/
+    align-items:center;
+
+    /* these values given by ui ux designer */
+    gap:5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    /* these values given by ui ux designer */
+
+}
+
+.faded-text
+{
+    position: absolute;
+    user-select: none;
+    font-size: 3rem; /*faded text mae font change krne pr transition show hora bcoz upr khee pr mene transition : all lgaa deeya hoga*/
+    color: rgb(231,231,231);
+    
+    /* these values given by ui ux designer */
+    bottom: 2% ;
+    left: 1%;
+    font-weight: bold;
+    transition: 3s all;
+    /* these values given by ui ux designer */
+
+    /* align-self:last baseline; */
+    /* align-self: flex-end; */
+    /* align-self: last baseline; */
+    
+    
+}
+
+/*F2 point(1) NESTED FLEX INSIDE 2ND FLEX*/
+/* or f2 point1 can be said as subpartF2.1 */
+.herosection-left
+{
+    border: 2px solid brown;
+    display: flex; /*hero section left ke andr mere 4 div hae diff unko muje column wise place krna haalki wo by default hae he but agr muje flex
+    ke koe property use krne like @1x11 below than i made it as flex*/
+  
+    flex-direction: column; /*column by default rehta hai but js center alignitem center ke leeye use krdiya display:flex*/
+
+    justify-content: center; /*@1x11 parent flex property*/
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+
+
+
+/*sub-subpart 2.1 -->further flex-items part  */
+.hero-section-heading
+{
+
+     /* these values given by ui ux designer */
+    font-size: 20px;
+    color: #343d68;
+    font-weight: 500;
+     /* these values given by ui ux designer */
+}
+
+
+/*subpart 2.2 further flex-items part  */
+.role{ /*tabhi deeya role so running text ko color kr paun mae*/
+
+        
+     /* these values given by ui ux designer */
+        color: #d54592;
+        font-weight: 800;
+         /* these values given by ui ux designer */
+}
+
+
+.hero-section-subheading /*2nd wala flexitems of herosection left usmae lgjayega yae*/
+{
+     /* these values given by ui ux designer */
+    font-size: 17px;
+    line-height: 5px;
+     /* these values given by ui ux designer */
+
+     /* BUT I KNOW WHERE AND HOW TO DO IT THATS MAIN AS WEB DEVELOPER */
+}
+
+
+/*subpart 2.3 further flex-items part  */
+.hero-section-description
+{
+     /* these values given by ui ux designer */
+
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 70%;
+    font-size:15px;
+     /* these values given by ui ux designer */
+}
+
+#btn_hu_of_hero_section
+{
+    font-size: 12px;
+    font-weight: 500;
+    /* background-color: rgb(18, 254, 49); */
+    border-radius: 10%; 
+    /* display: inline-block; */
+    
+    /* width: fit-content; 
+    /*div size == content (like dynamically increase)*/
+    width: fit-content;
+    /* width: 20px; */
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border: 1.2px solid black transparent; 
+
+    /* given by my ui/ux designer just read and paste */
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+
+ }
+.pinkbtn::before
+{
+    content: ""; 
+    background-color: rgb(54, 46, 46); /* color ke jgaah gradient use krra hu */
+    background-image:radial-gradient(#df6262  , #e69dc3); 
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: transform 0.4s ease-in 1ms;
+} 
+.pinkbtn:hover::before
+{
+    transform: scaleX(1);
+    transition: 3s;
+    border-radius: 2%;
+    
+} 
+
+
+
+/* -------------------------------------- */
+/* /* subpart2.2 */
+/* -------------------------------------- */
+
+.herosectionright
+{
+    position: relative; /*bcoz muje 5-6 icons or images ismae bhot se image overlap krwane hae herosection right wale div pr*/
+    /* z-index: -1; */
+    border: 10px solid rgb(204, 233, 247);
+    padding: 2rem;
+    /* background-color: red; */
+    /* padding: 2rem; */
+    /* width:1200px; */
+}
+/* .userimage
+{
+    height: 100%;
+    width: 100%;
+} */
+#userimg-size
+{
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+}
+.absolute
+{
+    position: absolute; /** so all images khud absolute overlap hojaye image pr  it sees nearest ancestor thats why done for herosection right as relative/
+    /* z-index: 1; */
+
+}
+
+/* sub sub part 2.2 point1 [1stimage] */
+
+
+.user-image
+{ 
+    padding: 0.5rem; /*white patti image se andr ke trf*/
+    /* filter: grayscale(1);  */
+    /*write 1 or 100% same*/
+    /* transition: all 1s;  */
+    /*means  userimage ke upr koe b property lgaunga un sb pr transition lagega 
+    syntax is[[[ property|| timetochange transition from origional to new state || transition-timing-function ease in ||transition-delaytime(means after how long to start it) ]]*/
+
+    animation-name: scaleImage;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction:linear or alternate-reverse; no need of this  why??
+    /*scale ko maine 1 1 rkha wa least and max pr with animation iteration count infinite that creates kinda animation-direction as linear*/ 
+    animation-delay: 1ms;
+    
+
+    /* animation: scaleImage  5s linear infinite; */
+    z-index: -4;
+    /* width: 300px; */
+    /* height: 400px; looking messy */
+    width: 100%;
+    height: 100%;
+    border: 2px solid goldenrod;
+}
+
+@keyframes scaleImage
+{
+    /* these 0% 50 % 100% these are not width or height
+    these are just assumable percentage of animation
+    means 0 %animation pr kya hoga
+    50% kya
+    and 
+    100 % pr kya */
+    0% /*0 % to 100% is from andrr to bhaar
+    so dont link or try to combine it with concept of scaleX or scaleY*/
+    {
+        filter: grayscale(0);
+        transform:scale(1);
+        /* box-shadow: 3px 3px 10px rgb(111, 108, 108) ; */
+        box-shadow: 3px 3px 10px black ;
+        
+    }
+    50%
+    {
+        filter: grayscale(1);
+        transform:scale(1.1);
+        box-shadow: 3px 3px 10px rgb(235, 235, 235) ;
+    }
+    100%
+    {
+        transform:scale(1); /*scale ko maine 1 1 rkha wa least and max pr with animation iteration count infinite that creates kinda animation-direction as linear*/
+        filter: grayscale(0);
+        /* box-shadow: 3px 3px 10px rgb(225, 90, 90) ; */
+
+        box-shadow: 3px 3px 10px rgb(72, 68, 68) ;
+
+    }
+}
+
+/* sub sub part 2.2 point2 [next image/icon] */
+.icon-dots
+{
+    z-index: 1;
+    
+    
+    /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    bottom: -1rem;
+    right: 0;
+    /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+
+
+
+    animation-name: icon-dots-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-direction: linear; no need of this*/
+}
+
+/* scale translate sae movement animation so ek state sae dusre state 0 % 50% 100% mai changes laata rahu */
+@keyframes  icon-dots-animation /*i can add 5-6 key frames 0 10 20..100% like this*/
+    {
+    0%
+    {
+        transform : translatey(0px)
+    }
+
+    50%
+    {
+        transform : translatey(-15px) /*niche in -y axis*/
+    }
+    100%
+    {
+        transform : translatey(0px)
+    }
+}
+
+.icon-cube
+{
+    z-index: 1;
+     /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    top: -0.8em;    
+    right: 1em;
+     /* this work bcoz i used every image in herosection-right  as absolute means absolute to div in which i had stored an image*/
+    animation-name:icon-cube-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction:linear; no need */
+    
+
+}
+@keyframes icon-cube-animation
+{
+    0%
+    {
+        /* translate and scale need perspective but rotatez dont need perspective bcoz wo apne axis pr he ghumega */
+        transform: rotateY(0deg) translateY(0px); /*rotate y done bcoz y axis pr ghumra ye*/
+    }
+    50%
+    {
+        transform:rotateY(180deg) translateY(-12px);
+    }
+    100%
+    {
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+
+.icon-circle
+{
+    z-index: 1;
+    /* bottom: 8rem; */
+    /* right: 33rem; */
+    left: 0;
+    bottom: 0;
+    animation-name: circle-icon-shakeEffect;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction: linear ; no need */
+}
+@keyframes circle-icon-shakeEffect{
+
+    /*i can use translate x or left bottom too bcoz this images are absolute so i can use these property as herosectionRight is relative now  */
+    0%
+    {
+        left: 0;
+        bottom: 0;
+    }
+    50%
+    {
+        left: 5%;
+        bottom: 10%;
+    }
+    100%
+    {
+        left: 0;
+        bottom: 0;
+    
+    }
+}
+
+.icon-zigzag
+{
+    z-index: 1;
+    
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    top: 1.5em;
+    left: -0.3em;
+    /* VIMP ---- if i dont set uo top and left position no doubt images are at its place but when i apply top right positioning in animation */
+    /* its top means top sae ,right means -> right sae , left means-> left sae and bottom means bottom sae so it gonna messed up. ----VIMP */
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    animation-name: zigzagAnimation;
+    animation-duration: 4s;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zigzagAnimation{
+
+    0%
+    {
+        top: 0%;
+        left: 0%;
+        /* bottom: 0%; */
+    }
+    50%
+    {
+        top: 5%;
+        left: 10%;
+        /* bottom: 100%; */
+    }
+    100%
+    {
+        top: 0%;
+        left: 0%;
+    
+    }
+}
+
+
+
+.icon-plus
+{
+    z-index: 1;
+    
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+    top: -0.8rem;
+    left: 50%;
+   
+   
+   
+    /* VIMP ---- if i dont set uo top and left position no doubt images are at its place but when i apply top right positioning in animation */
+    /* IT MEANS US WALE POSITION SAE IDHR UDHR HOJANA
+    NAKI UDHR EXACTLY PLACE KRNA SO ->>>>its top means top sae ,right means -> right sae , left means-> left sae and bottom means bottom sae so it gonna messed up. ----VIMP */
+    /* given by ui ux designer + herosectionright is relative and this image including all 5 images are absolute overlap on herosectionright */
+   
+   
+    animation-name: iconplus-shakeEffect;
+    animation-duration: 2s;
+    /* animation-direction: linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+
+}
+
+@keyframes iconplus-shakeEffect {
+
+    0% 
+    {
+        top: 0%;
+        left:44%; /*left isiliye use keeya maine bcoz image ko beech mae place keeya left ke help sae he*/
+    }
+    
+    50%
+    {
+        top: 3%;
+       left: 50%;
+    }
+     100%
+    {
+        top: 0%;
+        left: 44%;
+    
+    } 
+}
+/*hero section ended here  */
+
+/* /rem and em best units for responsive websites/ */
+
+/******************************************************************************************  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **************************************************************************************** */
+/* **************************************************************************************** */
+/* its part of project section */
+ .page-header
+ {
+    padding-top: 30px;
+    color: rgb(14, 11, 12);
+    /* text-align: start; */
+    position: relative;
+    /* top: 0; */
+    /* left: 10px; */
+    bottom: 10px;
+    font-size: 40px;
+    /* border: none; */
+    /* background-color: red; */
+ }
+
+    /* .project-container
+    {
+
+    padding: 5px;
+    margin:10px;
+    gap: 60px;
+
+
+    } */
+
+/* .project-card */
+ /*containing bg image and used its position relative so i can used icon as position absolute on it and 
+project number too can be placed overlapped on it*/
+    /* { */
+        /* z-index: 0; */
+
+        /* border: 8px solid seagreen; */
+        /* width: max-content; */
+        /* height: max-content; */
+        /* height: 300px; */
+        /* background-image: url(./Project22.png); */
+        /* background-position: center; this is making mess with center */
+        /* background-size: cover;fit images to width or div it is in means  image cover that div fully */
+        /* background-repeat: no-repeat; image fit hone ke leeye repeat ne hoge */
+
+
+        /* position: relative;bcoz muje iske upr images ko float krwna h */
+        /* box-shadow: 0px 0px 40px #1f1f1f; */
+        /* background-color: #1f1f1f9a;/point@113 */
+        /* background-size: cover; */
+        /* background-position: center; */
+
+    
+
+    /* .project-card img
+    {
+        width: 100%;
+    } */
+/* } */
+
+
+.project-container
+{
+    border: 8px solid black;
+    max-width: 600px; /*max expanding till 1st part i.e navbar*/
+    margin: 0 auto; /*bilkul beech m aagya*/
+    padding: 3rem 0;
+
+    display: flex; /*so sb container ke cheezo pr mai property lgaa sku or column wise to by default hai ye but rkhna pdega bcoz after flex,
+    flex items get arranged horizontally i.e flex-direction:row acc to mainaxis*/
+    flex-direction: column; 
+    gap:10px;
+}
+
+.project-card /*containing bg image and used its position relative so i can used icon as position absolute on it and 
+project number too can be placed overlapped on it*/
+{
+    z-index: 0;
+
+    border: 8px solid seagreen;
+    /* width: 90%; */
+    height: 300px;
+    /* background-image: url(./Project22.png);   */
+    /* background-position: center; this is making mess with center */
+    background-size: cover;/*fit images to width or div it is in means  image cover that div fully*/
+    background-repeat: no-repeat; /*image fit hone ke leeye repeat ne hoge*/
+
+
+    position: relative;/*bcoz muje iske upr images ko float krwna h*/
+    box-shadow: 0px 0px 40px #1f1f1f;
+    /* background-color: #1f1f1f9a;/point@113/ */
+
+}
+
+
+.projectnumber
+{
+    position: absolute;
+     /*sae width mae control aajata hae  == content idk may be it becomes inline-block or inline diff is for inline block i can set as width and height
+     but  [not if div is display:inline]*/
+     /* display: inline-block; */
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(255,255,255);
+    /* right: 150px; */
+    /* z-index: 2;  */
+    
+    /* height: 20px; */
+    /* width: 60px; */
+    /* background-color: red ; */
+    
+    display:none; 
+    /*bcoz card pr hover krne pr aana chaihye*/
+    background-color: rgba(19, 191, 221, 2);
+    z-index: 12; /*jo slidecolor aara hae in before a part uske upr rkhna h muje ye so*/
+  
+   
+
+}
+
+.projectnumber::before
+{
+    content: "";
+    background-color: rgba(241, 60, 44,0.7);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -12;
+    transform: scaleX(0);
+    transition: transform 1s;
+    transform-origin: left;
+}
+
+/*its pronounced and worked as [projectcard pr jb hover krna tb kis class mae kya krna ya kis id mae kya krna]*/
+.project-card:hover .projectnumber 
+{
+    display: block;
+    /* background-color: rgba(136, 174, 181, 0.3); */
+}
+
+
+/* agr mai transition b na lgau bcoz maine hover use keeya than b wo work krega */
+.projectnumber:hover::before
+{
+    transform: scaleX(1);
+
+} 
+
+.rightnumber /*taken multiple class name with projectnumber bcoz i want to set property for 2leftNumber and 2RightNumber*/
+{   
+    right: 10px; /*note used already position absolute is 1st projectnumber div so apply here too that is why i can use right :40px and top property*/
+    top:10px;
+    border: 2px solid saddlebrown;
+
+}
+
+.leftnumber
+{
+    left: 10px;
+    top: -45px;
+}
+
+.project-content{ 
+
+  
+    /* height: 200px; it will remain same */
+    /* width: 250px; */
+    height: 90%;
+    width: 80%;
+    border: 4px solid wheat;
+    color: white;
+    padding: 2em;
+    bottom: 28%;
+    z-index: 2; /*bcoz muje card ke upr rkhna hae ye box that is project-card ke */
+    gap: 1em;
+    position: absolute;  /*by this every thing inside project contenr a to d 4 items will overlap too on top of project-card*/
+    /*bcoz is box ko b muje overlap krna hae project card pr*/
+    
+    
+    /* justify-content: center;
+    align-items: center; */
+    display: flex; 
+    /*bcoz muje is box ke upr parent flex ke upr icons ke positioning krne hae column wise + agr parent flex property ke need hue to wo be use krlungaf*/
+    flex-direction: column;
+    
+    background-color: red;
+    bottom: 2%;
+}
+
+.leftProjectContent
+{
+    left:10%
+}
+.rightProjectContent
+{
+    right: 10%;
+}
+.project-skills-container /* made it flex(used flex 2nd time) */
+{
+    background-color: yellow;
+    border: 8px solid black;
+    
+    /* been flex-wrap ke b hojaara squeeze icons */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-shrink: 2; */
+    /* been flex-wrap ke b hojaara squeeze icons  MAY BE BCOZ I USED FLEX ABOVE PROBABLY*/
+    gap: 10px;
+    width: 100%;
+    /* height:100%; */
+
+    /* width: 180px; */
+    height: 80px;
+
+}
+.project-skills-container img /*containing images*/
+{
+    /* height: 40px; */
+    width: 15px;
+    /* z-index: 20; */
+}
+
+
+#project1
+{
+    background-image: url(./images/projects/Project1.png);
+    
+}
+#project2
+{
+    background-image: url(./images/projects/Project2.png);
+    /* margin-left: 40px; */
+    margin-left: 10%;
+}
+#project3
+{
+    background-image: url(./images/projects/Project3.png);
+}
+#project4
+{
+    background-image: url(./images/projects/Project4.png);
+    margin-left: 10%;
+
+}
+
+.project-heading
+{
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 3rem;
+    /* position: relative; */
+    /* bottom: 48%; */
+}
+
+/* part3.2 pointc  */
+.project-subheading
+{
+width: 100%;
+/* flex-basis: 100%; */
+height: 100%;
+border: 2px solid black;
+font-size: 12px;
+font-style: italic;
+position: relative;
+bottom: 10%;
+
+}
+/* f5 means flex5 */
+/* f5) flexused 5th time */
+.button-and-icon
+{
+    border: 4px solid blue; /*ye use keeys so i can see relative position of button with respect to its original position
+    i.e by border i can predict very easily*/
+    border: none;
+    position: relative;
+    display: flex;
+    /* gap: 0.9rem; */
+    /* align-items: start; */
+
+    /* justify-content: ; */
+    /* justify-content: baseline; */
+
+
+
+}
+
+
+.secondclassbtn:hover{
+    border: none;
+}
+
+
+.icon
+/* bcoz i and a are not div element */
+{
+    color:rgb(247, 238, 238);
+    cursor: pointer;
+    /* border: 12px solid black; */
+    /* width: 40px; */
+    font-size: 18px ;
+    transition-property: color; /*all means on which property write color or all and all means all propertt inside icon and stuff inside it*/
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 1ms ;
+    position:relative;
+    padding-bottom: 10px;
+    
+    /* gap: 100px; */
+    /* bottom: 100%; */
+    /* left: 10%; */
+    /* right: 5 0%; */
+    top:-42px;
+}
+
+.icon:hover
+{
+    color:var(--bgOrange);
+}
+
+
+
+/* .icon
+{
+    height: 10px;
+} */
+.pinkbtn
+{
+    text-align: start;
+    font-size:10px;
+    font-weight: 500;
+    background-color: rgb(219, 234, 221);
+    border-radius: 2%; 
+    /* display: inline-block; */
+    
+    /* width: fit-content; 
+    /*div size == content (like dynamically increase)*/
+    width: 60%;
+    height: 80%;
+    /* position: relative; */
+    /* z-index: 1; */
+    cursor: pointer;
+    border: 1.2px solid black transparent; 
+
+    /* given by my ui/ux designer just read and paste */
+    /* padding: 0.8rem 2.3rem; */
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    bottom: -50%;
+    /* text-align: center; */
+ }
+ 
+.pinkbtn::before
+{
+    content: ""; 
+    background-color: rgb(54, 46, 46); /* color ke jgaah gradient use krra hu */
+    background-image:radial-gradient(#df6262  , #e69dc3); 
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: transform 0.4s ease-in 1ms;
+} 
+.pinkbtn:hover::before
+{
+    transform: scaleX(1);
+    transition: 3s;
+    border-radius: 2%;
+    
+} 
+
+
+#project-skills-container-fourth
+{
+    background-color: yellow;
+    border: 8px solid black;
+    
+    /* been flex-wrap ke b hojaara squeeze icons */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-shrink: 2; */
+    /* been flex-wrap ke b hojaara squeeze icons  MAY BE BCOZ I USED FLEX ABOVE PROBABLY*/
+    gap: 10px;
+    width: 100%;
+   
+    height: 180px;
+}
+#project-skills-container-fourth img
+{
+    height: 40px;
+    width: 30px;
+}
+
+    
+    .pinkbtn /*it gonna be override with id bcoz its class of pinkbtn */
+    {
+        position: relative;
+        bottom: 60%;
+    }
+
+/* i used  position relative in all three heading ,subheading and pinkbtn all bcoz
+and suppose if i use position absolute so i can bcoz Projectcard position is relative
+ */
+/* 1st project-content-stuff */
+#project-heading-first
+{
+    position: relative;
+    bottom: 10%;
+    left: 2%;
+}
+#project-subheading-first
+{
+    bottom: 20%;
+}
+#pinkbtn-first
+{
+    position: relative;
+    bottom: 120%;
+}
+/* 2nd project-content-stuff */
+#project-heading-second
+{
+    position: relative;
+    bottom: 10%;
+    left: 0%;
+}
+#project-subheading-second
+{
+    bottom: 20%;
+}
+#pinkbtn-second
+{
+    position: relative;
+    bottom: 120%;
+    text-align: center;
+}
+
+
+/* 3rd project-content-stuff */
+#project-heading-third
+{
+    position: relative;
+    bottom: 10%;
+    left: 4%;
+}
+#project-subheading-third
+{
+    bottom: 20%;
+}
+#pinkbtn-third
+{
+    position: relative; 
+    bottom: 100%;
+    text-align: center;
+}
+
+
+
+
+/* 4th project-content-stuff */
+#project-heading-fourth
+{
+    position: relative;
+    bottom: 10%;
+    left: 4%;
+}
+#project-subheading-fourth
+{
+    bottom: 20%;
+}
+#pinkbtn-fourth
+{
+    position: relative; 
+    bottom: 100%;
+    text-align: center;
+}
+
+
+}   

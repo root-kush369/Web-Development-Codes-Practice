@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioWebsite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <!--1> pahle ek bdaa wrapper lena h muje best practice -->
+    <div id="wrapper">
+
+
+        <!-- 2>why container needed???
+         Ans->ek container mae navbar pack krdiya why?
+         suppose muje navbar ke outer area ke positioning krne h
+                <div>
+                    <a href="#projects">Projects</a>
+                </div>
+                f is div but again good practice
+         but no need of taking container  iguess 
+         but babbar bhai took and pack navbarlogo and navbar items in 1 box container and
+         made its width 1200px-->
+       
+
+         <!-- part1 taken container for navbar part-->
+         <div class="container"> 
+            
+         
+            
+            <!--3 why navbar  needed ? navbar which is made as div  
+              but ig to make it as flex i need it bcoz to place
+              navbar  containing class logocontainer which is div
+               ----and --
+               
+               navbar containing class as navitems hyperlinks
+               i had to use this navbar class div as container as flex
+               
+               
+               so to bring both child
+               3.1>logocontainer
+               3.2>bavitems in same line  ---->
+            
+            
+               <!-- ismae actual logo and link aara 
+                means actual content -->
+               <div class="navbar">
+                
+                
+                <!-- 3.1> -->
+                <!-- 1st item -->
+                <div class="logocontainer">
+                    <!-- <img src="./images/userAsset/NavLogo.jpg" alt="error" class="logoimg"> -->
+                    <img src="k.png" alt="error" class="logoimg">
+                    <div class="logotext">
+                        <p id="logoheading"> ush Bhardwaj
+                            </p>
+                        </div>
+
+                </div>
+           
+
+
+            <!--4> nav items containing  anchor tags hyperlinks -->
+             
+            
+                <div class="nav-link-parent">
+                    <div class="nav-items">
+                        <a href="#projects">Projects</a>
+                    </div>
+                    
+                    <div class="nav-items"> 
+                        <a href="#Skills">Skills</a>
+                    </div>
+                    
+                    <div class="nav-items">
+                        <pre> <a href="#Contact-Me">Contact-Me</a> </pre>
+                        <!-- used pre bcoz contact-me dusre line mae aarha thaa  -->
+                    </div>                   
+                </div>
+
+                
+            </div>
+
+
+        </div>
+
+
+        <!-- part2 -->
+         <div class="hero-section">
+
+            <!-- this is most bottom wala text -->
+            
+            
+            <div class="absolute faded-text">
+                 Mr-Robot
+                </div> <!---i can write it below of hero section where its closing bcoz
+            at end i will be doing absolute positoning-->
+            <!-- used it as absolute bcz hero-section is relative iguess-->
+             
+            
+            <!-- this is most bottom wala text -->
+
+
+
+
+            <!-- subpart2.1 -->
+            <div class="herosection-left">
+                <!-- 1st cheeze -->
+                <!-- left part m total 4 cheez h -->
+                <div class="hero-section-heading">
+                    Hi this is Kush-Bhardwaj
+                </div>
+               
+               
+                <!-- 2nd cheez -->
+                <div class="hero-section-heading hero-section-subheading">
+                    <!-- I am a <span class="role">full stack Webdeveloper</span> -->
+                     I Am a <span class="role"> </span>
+                </div>
+
+                <!-- 3rd cheez -->
+
+                <div class="hero-section-description">
+                    I’m a software developer and here is my portfolio website. Here you’ll learn about my journey as a software developer.
+
+                </div>
+
+                <!-- 4th cheez -->
+                 <div class="pinkbtn" id="btn_hu_of_hero_section">
+                    <p>ReadMore</p>
+                </div>
+            
+            </div>
+
+
+            <!-- subpart2.2 -->
+            <div class="herosectionright">
+                <!-- multiple classes means jisme multiple classes use ke maine means use kee in div un sb classes ke property uske content ke andr aayege -->
+                
+                
+                <div class="absolute icons icon-dots">
+                    <img src="./images/userAsset/dots.png" alt="not-found">
+                </div>
+                
+                
+                <div class="absolute icons icon-cube">
+                    <img src="./images/userAsset/cube.png" alt="not-found">
+                </div>
+                
+                
+                <div class="absolute icons icon-circle">
+                    <img src="./images/userAsset/circle.png" alt="not-found">
+                </div>
+                
+                
+                <div class="absolute icons icon-zigzag">
+                    <img src="./images/userAsset/zigzags.png" alt="not-found">
+                </div>
+                
+                
+                <div class="absolute icons icon-plus">
+                    <img src="./images/userAsset/plus.png" alt="not-found">
+                </div>
+                
+                
+                <div class="user-image" >
+                    <img id="userimg-size" src="./images/userAsset/UserImage.png" alt="not-found">
+                </div>
+
+
+
+
+            </div>
+
+
+         </div>
+
+
+
+
+
+         <!-- part3 -->
+
+
+
+         <div class="projectsection">
+          
+          <!-- 3.1  heading-->
+            <h2 class="page-header">Projects</h2>
+
+            <!-- 3.2 project container for all cards so taken project card 1 big container-->
+
+            
+            
+            <div class="project-container" > <!--its project card container containing all cards-->
+                
+                
+                <!-- before a -->
+                 <div class="project-card" id="project1"> <!--used bg image in projec card  -->
+
+                 
+                    <!-- a -->
+                    <div class="projectnumber rightnumber">
+                        01
+                        
+                    </div>
+                    
+                    <!-- b -->
+                    <div class="project-content leftProjectContent">
+                        <div class="project-skills-container">
+                            <img  class="projectskill" src="./images/stack/HTML.png" alt="not-found" >
+                            <img src="./images/stack/CSS.png" alt="not-found" class="projectskill">
+                            <img src="./images/stack/Javascript.svg" alt="not-found" class="projectskill">
+                            <img src="./images/stack/Express.png" alt="not-found" class="projectskill">
+                            <img src="./images/stack/NextJsCircle.png" alt="not-found" class="projectskill">
+                            <img src="./images/stack/Tailwind.png" alt="not-found" class="projectskill">
+                            <img src="./images/stack/NodeJs.svg" alt="not-found" class="projectskill">
+                            <img src="./images/stack/MongoDB.svg" alt="not-found" class="projectskill">
+                            <img src="./images/stack/Redux.svg" alt="not-found" class="projectskill">
+                            <img src="./images/stack/Vercel.svg" alt="not-found" class="projectsill">
+                        </div>
+
+                        
+                    
+                        <!-- b.b -->
+                        <h2 class="project-heading" id="project-heading-first">Tint&Orange</h2>
+                        
+                        <!-- c -->
+                        <p class="project-subheading" id="project-subheading-first">
+                            Its is a car modification copany which provide you sheets to protect your car from scratch 
+                        </p>
+                        
+                        
+                        <!-- d) button and icon -->
+                        <div class="button-and-icon">
+                            
+                            <button class="pinkbtn secondclassbtn" id="pinkbtn-first">      
+                                <!-- <h4>Read-More</h4> -->
+                                <p class="textinsidebutton">ReadMore</p>
+                            </button>
+                            
+                            
+                                <a href="">
+                                  <div class="iconnnn">  <i title="Github-Link" class="fa-brands fa-github icon"></i> </div>
+
+                                    <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                                </a>
+                                
+                                <a href="">
+                                    <div class="iconnnn"> <i title="Github-Link" class="fa-solid fa-link icon"></i> </div>
+                                    <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                                </a>
+                                
+                        </div>
+                        
+                    </div>
+                 
+                 
+                </div>
+      
+
+
+
+                    
+                
+                
+                <div class="project-card" id="project2">
+                    <div class="projectnumber leftnumber">02</div>
+                    <div class="project-content rightProjectContent">
+                      <div class="project-skills-container">
+                        <img class="projectskill" src="./images/stack/HTML.png" alt="" />
+                        <img class="projectskill" src="./images/stack/CSS.png" alt="" />
+                        <img class="projectskill" src="./images/stack/Javascript.svg" alt="" />
+                        <img class="projectskill" src="./images/stack/NextJsCircle.png" alt="" />
+                        <img class="projectskill" src="./images/stack/Tailwind.png" alt="" />
+        
+                        <img class="projectskill" src="./images/stack/Redux.svg" alt="" />
+                        <img class="projectskill" src="./images/stack/Vercel.svg" alt="" />
+                      </div>
+                      <h2 class="project-heading" id="project-heading-second">
+                        <pre>Breaking-Copyrights</pre></h2>
+                      <p class="project-subheading" id="project-subheading-second">
+                        A platform to download copyrights free youtube music
+                      </p>
+                      <div class="button-and-icon">
+                            
+                        <button class="pinkbtn secondclassbtn" id="pinkbtn-second">
+                            <p  class="textinsidebutton">ReadMore</p>
+                        </button>
+                        
+                        
+                            <a href="">
+                                <i title="Github-Link" class="fa-brands fa-github icon"></i>
+
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+
+                            <a href="">
+                                <i title="Github-Link" class="fa-solid fa-link icon"></i>
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+                            
+                    </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  <div class="project-card" id="project3">
+                    <div class="projectnumber rightnumber">03</div>
+                    <div class="project-content leftProjectContent">
+                      <div class="project-skills-container" id="project-skills-container-third">
+                        <img class="projectskill" src="./images/stack/HTML.png" alt="" />
+                        <img class="projectskill" src="./images/stack/CSS.png" alt="" />
+                        <img class="projectskill" src="./images/stack/Javascript.svg" alt="" />
+                        <img class="projectskill" src="./images/stack/Express.png" alt="" />
+                        <img class="projectskill" src="./images/stack/NextJsCircle.png" alt="" />
+          
+                        <img class="projectskill" src="./images/stack/Vercel.svg" alt="" />
+                      </div>
+                      <h2 class="project-heading" id="project-heading-third">Isha Tattva</h2>
+                      <p class="project-subheading" id="project-subheading-third">
+                        A Website for interior designer to showcase her works and
+                        samples
+                      </p>
+                      <div class="button-and-icon">
+                            
+                        <button class="pinkbtn secondclassbtn" id="pinkbtn-third">
+                            <p class="textinsidebutton">ReadMore</p>
+                        </button>
+                        
+                        
+                            <a href="">
+                                <i title="Github-Link" class="fa-brands fa-github icon"></i>
+
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+
+                            <a href="">
+                                <i title="Github-Link" class="fa-solid fa-link icon"></i>
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+                            
+                    </div>
+                    </div>
+                  </div>
+             
+             
+                  <div class="project-card" id="project4">
+                    <div class="projectnumber leftnumber">04</div>
+                    <div class="project-content rightProjectContent" id="project-content-fourth">
+                      <div class="project-skills-container" id="project-skills-container-fourth">
+                        <img class="projectskill" src="./images/stack/NextJsCircle.png" alt="" />
+                        <img class="projectskill" src="./images/stack/Tailwind.png" alt="" />
+          
+                        <img class="projectskill" src="./images/stack/Vercel.svg" alt="" />
+                      </div>
+                      <h2 class="project-heading" id="project-heading-fourth">Granit</h2>
+                      <p class="project-subheading" id="project-subheading-fourth">
+                        A architectural website to plan your building or home (Hebrew
+                        Language)
+                      </p>
+                      <div class="button-and-icon">
+                            
+                        <button class="pinkbtn secondclassbtn" id="pinkbtn-fourth">
+                            <p class="textinsidebutton">ReadMore</pre> 
+                        </button>
+                        
+                        
+                            <a href="">
+                                <i title="Github-Link" class="fa-brands fa-github icon"></i>
+
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+
+                            <a href="">
+                                <i title="Github-Link" class="fa-solid fa-link icon"></i>
+                                <!-- if i use this class name i get icon i guess they are public url or predefined -->
+                            </a>
+                            
+                    </div>
+                    </div>
+                  </div>
+               
+               
+               
+               
+               
+               
+               
+                </div>
+              
+                
+        
+            </div>
+                       
+           
+
+            <!-- part4 -->
+
+            <!-- gonna make it as flex parent-->
+            <div id="skills" class="container skills-container">
+                
+                <!-- flex 1st child also flexNested parent -->
+                
+                
+                
+                <div class="covering-skills-container-left"> <!--taken to create a flex-->
+                    
+                    <!-- <div class="skills-container-left"> babbar bhai used this -->
+            
+                        <!--  -->
+                        
+                        <h1 class="skill-heading">
+                            
+                            <span class="caps">M</span>e and <br>
+                            
+                            My Tech Stack
+                            
+                        </h1>
+                        
+                        
+                    <!-- </div> -->
+                    
+                    
+                    <div class="skills-subheading">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Obcaecati saepe, doloribus voluptas necessitatibus distinctio non
+                          aliquid quas a cumque facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, unde. </p>
+                    <br>
+                    
+                    <p>Lorem ipsum dolor,Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, aut.  sit amet consectetur adipisicing elit. Corporis, asperiores optio voluptates id similique perspiciatis veritatis. Reprehenderit debitis dicta qui.</p>
+                    <br>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt labore quam dolores. Eveniet ex tempora quidem provident officia! Ullam.</p>
+                </div>
+                
+            </div>
+            
+            
+            <!-- flex-2nd-child -->
+            
+            <div class="skills-container-right">
+                <img id="blobimg" src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
+                
+                <img src="./images/stack/HTML.png" alt="" class="skillslogo"/>
+                <img src="./images/stack/CSS.png" alt="" class="skillslogo"/>
+                <img src="./images/stack/Javascript.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/React.png" alt="" class="skillslogo" />
+                <img src="./images/stack/NodeJs.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Next.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Redux.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Tailwind.png" alt="" class="skillslogo" />
+                <img src="./images/stack/Bootstrap.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/MaterialUI.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Express.png" alt="" class="skillslogo" />
+                <img src="./images/stack/Git.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Github.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Graphql.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/MongoDB.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Vercel.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/ChartJs.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Bash.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/Docker.svg" alt="" class="skillslogo" />
+                <img src="./images/stack/K8s.svg" alt="" class="skillslogo" />
+            </div>
+        </div>
+        <div class="skill-fade-text">Skills</div>                
+
+
+        <!-- part5 -->
+        
+        <div class="contactus-form-container">
+            <div id="container-having-form" class="container"> <!--same 1200px wala container so form beech mae aajayege-->
+
+                    <h1 class="contactus-heading">Contact-US</h1>
+                    
+                    
+                    <h3 class="contactus-subheading">Questions, thoughts, or just want to say hello?</h3>
+
+                    
+                    
+                    <!-- flex -->
+
+                    <div class="contactus-form-container">
+                    
+                        <form class="form" action=""> 
+                        
+                    
+                            <!-- only 1 child flex -->
+                        <div class="formfield-container"> <!---iske need ne thee but ismae sare input field store krwaa de klko kuch jrrurt pade design ya css property daalne m---->
+
+                            <!-- <label for="fullname">Name : </label> -->
+                            <label for="fullname"> </label>
+                            <input type="text" id="fullname" placeholder="Enter your name" name="name" value="" class="inputbox"> <!--value gonna be taken automatically after enter on backend-->
+                            <br><br><br>
+
+                            <!-- <label for="emaill">Email :</label> -->
+                            <label for="emaill"> </label>
+                            <input type="email" id="emaill" placeholder="Enter your email" name="em" value="" required class="inputbox">
+                            <br><br><br>
+
+                            <label for="subj"></label>
+                            <input type="text" id="subj" placeholder="Enter your subject" name="sub" value="" class="inputbox">
+                            <br><br><br>
+                            
+                            <br><br><br>
+
+                            <label for="TxtA"></label>
+                            <textarea name="txtarea" id="TxtA" placeholder="Enter your message" rows="10" cols="100" class="inputbox"></textarea>
+
+                            <br><br><br>
+                            <!-- <div class="pinkbtn"> -->
+                            <button class="formbtn">
+                                Send-Message
+                                <i class="fa-solid fa-paper-plane icon-plane-button"></i>
+                            </button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+
+
+
+
+                
+                </form>
+            </div>
+        </div>
+
+
+        <!-- part6 -->
+         <!-- footer -->
+
+         <!--6.1 leeya bcoz background color dena h -->
+         <div class="footer">
+
+            <!--6.2 container leeya kunke beech mae aayega wo width 1200px -->
+            <div class="container">
+                <!-- 6.3isko flex bnaunga -->
+                 <!-- isko relative rkhna hoga so footer-faded-text ko iske upr float krwaaa sku -->
+                <div class="footerwrapper-link-and-faded-text-and-icons"> 
+                    
+                    <!-- a) faded text -->
+                    <div class="footer-faded-text">
+                        kushsharma
+                    </div>
+
+                    <!-- flexitem1 leftside -->
+                    <!-- b ) hyperlinks -->
+
+                    <div class="all-links">
+                        <div class="footer-direction-links-div"> 
+                            <a class="footer-direction-links" href="">
+                                Projects
+                            </a>
+                        </div>
+                        
+                        <div class="footer-direction-links-div"> 
+                            <a class="footer-direction-links" href="">
+                                Skills
+                            </a>
+                        </div>
+                        
+                        <div class="footer-direction-links-div">
+                             <a class="footer-direction-links" href="">
+                                Contact-ME
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- flexitem2 rightside -->
+                    <div class="iconwrapper-rigthside">
+                        <i class="fa-brands fa-linkedin iconfooter"></i>
+                        <i class="fa-brands fa-github iconfooter"></i>
+                        <i class="fa-brands fa-twitter iconfooter"></i>
+                        <i class="fa-brands fa-instagram iconfooter"></i>
+                        <i class="fa-regular fa-envelope iconfooter"></i>
+                    </div>
+                </div>
+
+            </div>
+         </div>
+        
+        
+        
+           
+           
+                </div><!-- its of wrapper -->
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script> /*i will see in js soon*/
+    var typeData = new Typed(".role", {
+        strings: [
+          "Full Stack Developer",
+          "Web Developer",
+          "UI-UX Designer",
+          "Backend Developer",
+          "Coder",
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+    </script>
+</body>
+</html>
