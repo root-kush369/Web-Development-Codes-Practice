@@ -1,0 +1,310 @@
+*{
+    /* box-sizing: border-box; */
+}
+
+#outerdiv
+{
+display: flex;
+border: 2px solid black;                                        
+
+ background-color: aqua;
+
+ height: 800px;
+ /* width: 1000px; */
+  /*agr height dunaa to height is parentflex/parentbox/parentcontainer automatically strech hojayege 
+ nichae wale flex items kae hisab sae*/
+
+/* width: 100px; */
+/* flex-direction: column;  */
+ /*flex-direction: row;== display:flex*/ 
+ 
+ 
+ /*1)..NOTE:~~> by default main axis is this for outerbox (means inner child gets placed horizontally (complete individual) one after another)*/
+/*means main axis become vertical means all child elements gets placed vertically*/
+
+
+
+/* 2)column wise means completely taking space(from left to right full ) than boxes div gets placed in (**vertical**) direction one after another
+
+
+/* 3)row wise means completelt taking space-> boxes/div/container gets placed  (**horizontally**) in which box takes complete space from height and width(from top to bottom) ....
+..........than gets placed one after another */
+
+/* flex-direction:columns means means all child elements gets placed vertically*/ 
+/* flex-direction: row; with respect to main axis this property makes outer parent flex container placed horizontally (IT ISby default main axis)*/
+
+
+
+/* flex-wrap: wrap;  */
+/*A //default value is no wrap means next line mae shift nae hongae */
+
+
+/*B>VERY IMP FLEX-WRAP IN RESPONSIVE NESS FOR WEBSITE
+ SO ITS ONE OF POINT IN RESPONSIVENESS */
+/* final conclusion on my observation
+
+flex-wrap:wrap next line mae aayege flex-items
+SITUATION 1:~ ***no need of flex-wrap
+YE CHILD FLEX /FLEX ITEMS KO SQUEEZE KRDETA HAE JB MAANLO
+mere outerdiv/parent div ke width maanlo 500 hae or andr wale box
+flex items ke width less hae us sae to yhaa squeeze ke need nae hae
+bcoz by default flex items are able to fit in  STRAIGHT LINE 
+HORIZONTALLY I.E FLEX-DIRECTION:ROW/DISPLAY:FLEX outer div 
+to flex-wrap: wrap apply nahi hoga
+STILL ITS APPLIED but dont seem applied
+
+BUT :~~ need of flex-wrap!
+
+SITUATION 2ND IF OUTER DIV SIZE IS LESSER in units AND INNER DIV SIZE IS MORE
+THAN TO FIT FLEX ITEMS INSIDE OUTER DIV INNER CHILD GETS SHRINK
+AUTOMATICALLY MEANS..
+..REPOSITION THEMSELVES IN VERTICAL DIRECTION BCOZ ORIGINALLY IT WAS PLACED
+IN MAIN AXIS HORIZONTALLY AND I.E ACTUALLY CALLED
+FLEX-WRAP: WRAP PROPERTY APPLIED ON OUTER DIV/PARENT FLEX WHICH AFFECT
+INNER CHILD -->for ex sitaution2nd ex inner div maine 1000px width kri wi
+and outerdiv maine 10 krdiya to inner div bhee 10 hojayega that is bcoz
+of flex-wrap:wrap!
+
+SITUATION 2 . 1 -outerdiv  width == viewport and inner div width 
+is 1000pixels now when i use flex-wrap:wrap they all had to wrap inside
+outerdiv  its somewhat like situation 2nd only
+
+
+
+3 OF THEM APPLY ON OUTER DIV BUT ITS AFFECT IS SHOWN IN INNER CHILD ELEMENTS i.e flex items!
+
+*/
+
+
+/* B> flex-wrap:wrap-reverse */
+/* flex-wrap: wrap-reverse;  */
+/*niche sae upr chlaa jayega flex-items*/
+flex-wrap: wrap;
+
+
+
+/************************************************/
+/************************************************/
+/* SO CONTAINER PARENT FLEX PROPERTIES
+WHICH ARE APPLIED ALONG MAIN AXIS HORIZONTAL AXIS
+I.E FLEX-DIRECTIO:ROW AND IT AFFECT OR RESULT SHOWN FOR
+CHILDITEMS OR INNER CHILD OF PARENT FLEX*/
+
+/*1 DISPLAY: FLEX */
+/*2 FLEX-DIRECTION: ROW-WISE */
+/*3 FLEX-WRAP : WRAP */
+/* 4 FLEX-FLOW */
+
+/* flex-flow:  is short hand notation for  */
+/* flex-direction and flex-wrap; */
+
+
+
+/* 5> justify content */
+
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content:center;
+justify-content: space-around; /*4 block kae equal space aajate hae except before start and after end
+but first and last flex item intact NAHI rahengae first sae pahle and last kae baad se space brabaar bs or baaki beech wale boxes ka size same rahega/
+justify-content: space-evenly; /*4 block kae equal space aajate hae 
+but first and last flex item intact NAHI rahengae parent container sae edge to edge jud jayegea*/
+justify-content: space-between;/*4 block kae beech mae equal space but first and last flex item intact rahengae parent container sae edge to edge jud jayegea*/
+
+
+justify-content: space-evenly;
+justify-content: center;
+
+/* 6> {{{{
+**--> align-items  mtlb cross axis kae around KAAM AAYEGA
+**-->justify-content means main axis kae around KAAM AAYEGA inner childs pr affect
+show hojayega}}}}
+
+ALIGN-ITEMS AGAIN FOR PARENT FLEX BUT APPLY WITH RESPECT TO CROSS AXIS AND AFFECT CHILD ELEMENTS */
+/* /NOW PROPERTIES FOR CROSS AXIS VERTICAL ALLIGNMENT */
+
+
+/* align-items: flex-start; */
+/* align-items: flex-end; */
+/* align-items: center; */
+align-items: stretch; 
+/*by default align-items is stretched only and its 
+//in reality bcoz of height not given in flex-items
+and div is block element so it touches block
+but since i used display:flex so its changed its position
+along horizontall placement touching height of outerdiv (towards top to down)
+where as earlier inner div being block element was touching width of outr div (towards left to right)*/
+
+align-items: baseline; /*content jitna space*/
+align-items: center;
+
+align-items: start;
+/* //means inner div ka size == content size hojayega */
+
+/************************************************/
+/************************************************/
+
+/*qUES->HW  PLACE CONTENT EXACTLY IN BETWEEN OF page: 
+BY justify-content: CENTER AND align-items: color-interpolation-filters: ;;;;;*/
+/* 7 gap to give equal gap just in between of inner child
+not in left most of first child
+and right most of last child so margin does that which i dont want */
+/* although margin will do job but not accurate for before gap of first child and after gap of last child */
+/* gap: 10px; */
+/* //gap is short hand notation for
+row-gap: 
+and column-gap: ;; */
+
+
+/*8> align-content*/
+/* maine width 400 krde  and bcoz of flex-wrap actually
+flex-item next line mae aagya now
+ye sb flex-items kae beech kae distance ko handle krna ho to 
+
+muje align-content use krna hae
+means align-content multiple rows ke beech kae space ko
+handle krta hae*/
+/* align-content:flex-start ;/*
+/* align-content: flex-end; */
+/* align-content: center; */
+/* align-content: space-between; */
+/* align-content: space-around;  */
+/*beech mae equal gap left or right mae nae hae left and right ke space ke leeyae space-evenly use kro*/
+/* align-content: space-evenly; */
+
+
+
+gap: 10px;
+}
+
+
+
+/* //KEY DIFF BETWEEN CONTAINER-FLEX-PARENT  properties
+                    AND 
+                FLEX ITEMS properties
+IS THAT FLEX PARENT ALSO APPLY ON CHILD ITEMS FOR THERE LAYOUT
+AND POSITIONING 
+BUT THEY APPLY ENTIRELY TO GROUP OF CHILD but along (MAIX AXIS)
+
+BUT FLEX ITEMS PROPERTY APPLICABLE TO LAYOUT OR POSITIONING and along (CROSS AXIS)
+OF INDIVIDUAL FLEX ITEMS although if i made same class property can be applied on all flexitems
+like did in flex-parent(but there i cant use of individual elements) where as in flex-items properties
+by giving id to each flex-items i can apply the property very well */
+.innerdiv
+{
+
+                    /* flex-grow: 1; */
+                    /*by default value 0*/
+                                     
+                    /* margin: 10px; */
+                    border: 2px solid red;
+                    /* width:100px; */
+                    /* width:100px; */
+                    /* height:400px; */
+                    background-color: yellow;
+                    /* display: inline-block; */
+
+                    
+                    /*1st property is order */
+                    /* 2nd propery flex-grow */
+                      /*flex grow pura fit hojata hae jb tk usko apne left right yaa ass paas ka dusra tag naa milae till that pure width  le lega*/
+/* /Topic2 flex item properties
+FLEZ-GROW IS EXACT OPPOSITE OF FLEX-SHRINK MORE VALUE OF FLEX-GROW MORE SPEED IT WILL GROW IF PAGE SIZE INCREASE (THAN OTHER FLEXITEMS'S IF I USE FLEX GROW AND ITS VALUE IS LESSER)
+WHERE AS IN FLEX-ITEMS AS SIZE/DISPLAY OF WEBPAGE DECREASE ACC TO DIFF SCREENS
+SPEED OF SHRINK INCREASE 
+
+BOTH FLEX GROW AND FLEX-SHRINK MORE VALUE MEANS SPEED OF GROW AND SHRINK INCREASE(MOREVALUE OF FLEXGROW/FLEXSHRINK) AND DECREASE(LESSVALUE OF FLEXGROW/FLEXSHRINK)
+BUT THEY APPLICABLE OR I CAN SAY WORK ON SAME LINE AND DONT WORKS WITH FLEX-WRAP
+
+flex-grow bydefault value 0
+flex-shrink bydefault value 1*/
+
+
+
+                    /* 3rd property flex-shrink by defaul value is 1 */
+                    /*4th property flex-basis ->width denae ko use hoga flex-items pr*/
+                    /* flex-basis: 50%; */
+                    
+
+                    /* flex-shrink vs flex-wrap: 
+                    flex-wrap and shrink both used in responsive website its 
+                    a point for responsiveness but widely still used in 
+                    flex-wrap bcoz world will admire size should not be change of tag and elements
+                    rather they could come in nextline vartically i.e flex-direction:column-gap: display: ;;;
+                    
+                    
+                    flex-shrink sae mai kisi flex-items ke speed control 
+                    kr skta hu by this speed of squeezing is more if flex-shrink valueis more
+                    but used where i dont want to make content on next line and intentionally want to fit
+                    everything on same line like
+                    navbar ,buttons,navigationlinks and see chatgpt chat on 14-10-2024
+                    
+                    DO NOTE FLEX-SHRINK DONT WORK WITH FLEX-WRAP
+                    AND FLEX-SHRINK IS NOT NEGATIVE*/
+                    
+                    /*4th property flex-basis== width but flex-basis dont cut out extra content
+                    if content grow flexitems width grows and height can grows too
+                    depend on (viewport/screen of device)
+                    where as width will cut extra part
+
+                    I CAN USE HERE PERCENTAGE  pixel or diff css units too ALSO 
+                    FLEX-BASIS:50%; 50 % of its parent container /parent flex or if use pixels so pixel of its parent
+                    50px of parent iguess
+                    /*
+
+                    /*5th property flex -> is short hand for above 4 property
+                    order
+                    flex-grow
+                    flex-shrink
+                    flex-basis*/
+
+
+                    /* 6th property align-self (ONLY 1 FLEX-ITEM ALIGN applicable to change positions and size)
+                    //overrides grid or flex-items value
+                    
+                    **align-self applicable on individual element to change size
+                    now i can change size by flex-grow--> but it changes width..
+                    .. completely till box (used for responsiveness)
+
+                    
+                    **flex-shrink : dont set size but make website to fit on same line on shrink
+                    in a sense control squeezing speed(used for responsiveness)
+                    
+                    **flex-basis b width bdaaa deta h but responsive bnayega website
+
+                    */
+}
+/* CONCLUDED VIMP -> ALL PARENT PROPERTY OR GRID(PROBABLY) ARE OVERRIDEN BY INDIVIDIAL PROPERTY APPLIED ON FLEX-ITEMS */
+/* #one */
+/* { */
+                    /* flex-shrink: 4; */
+                    /* order: 1; */
+                    /* flex-grow: 1; */
+                    /* align-self: stretch; */
+/* } */
+ /* #two */
+/* { */
+                    /* order: 4; */
+                    /* align-self: flex-end; */
+
+/* } */
+/* #three */
+/* { */
+                    /* order:2; */
+                    /* align-self: center; */
+/* }  */
+/* #four */
+/* { */
+                    /* flex-grow: 3; */
+                    /* order: 1;same order sae new box just piche aajata hae old box kae */
+                    /* flex-basis: 20px; */
+/* } */
+
+
+
+/*{so for responsive websites:-
+ flex-wrap
+flex-shrink
+flex-basis are used a lot} */
+
+/*universal selector apply on every element and override every property*/
