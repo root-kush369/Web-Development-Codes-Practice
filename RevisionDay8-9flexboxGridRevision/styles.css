@@ -1,0 +1,102 @@
+*{
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+}
+
+.outercontainer
+{
+                    border: 2px solid black;
+                    height: 30rem;
+                    /* width: 100rem; */
+                    /* width: 300px; */
+                    /* but dont fix bcoz if outer width is more than inner div no need to wrap  and if less than automatically inner div gonna wrap accordingly*/
+                    background-color: aqua;
+                    display: flex;
+                    flex-direction: row;
+                    /* flex-wrap: wrap; */
+                    /* flex-grow: 2;  */
+
+
+                    /* justify-content: center; */
+                    /* justify-content: end; */
+                    /* justify-content: left; */
+                    /* justify-content: right; */
+                    /* justify-content: space-around; */
+                    /* justify-content: space-between; */
+                    /* justify-content: space-evenly; */
+                    
+                    /* justify-content: center; */
+                    /* justify-content: center; */
+                   
+                   
+                    /* align-items: center; */
+                    /* align-items:start; */
+                    /* align-items: end; */
+                    /* align-items: normal; */
+                    
+                    
+                    
+                    
+
+                    /* use when there is row in flex item i will use when i will create layout by grid/it also works with respect to cross axis but space between rows denae ka kaam krta h yae */
+                   /* align-content: center; */
+                   /* align-content: baseline;*/
+                   /* align-content:flex-start; */
+                   /* align-content: flex-end;  */
+                   /* align-content: center; */
+                   /* align-content: space-around; */
+                   /* align-content: flex-start;  */
+                    
+
+justify-content: center;
+align-items: center;
+
+
+}
+.innercontainer
+{
+                    border: 3px solid black;
+                    background-color: red;
+                    /* width: 100px; */
+                    height: 100px;
+                    
+                    /* width: 20rem; this is immediate to its parent 16*parent */
+                    /* width: 10%; */
+                    /* layout bekaar hae is saebnana mae grid use kruga layout ke leeyae
+                    but still flex-wrap , flex-grow ,flez-shrink  may be crucial for responsiveness */
+
+                    /* flex-grow: 2; they works togetherso flex grow and wrap combination is awesome */
+                    
+  
+                    
+                    
+
+}
+/* #box1
+{ */
+/* flex-shrink: 4 ; */
+/* flexhsrink and flex wrap dont work together as shrink do shrink on sameline
+and flexwrap job is to push flexitems to next line
+} */
+
+#box1
+{
+       /* align-self: flex-end;             
+       align-self: baseline;
+       align-self: last baseline;
+       align-self: first baseline; */
+}
+#box2
+{
+                    /* align-self: first baseline; */
+                    /* align-self: last baseline; */
+                    /* align-self: baseline; */
+                    /* align-self: last baseline; */
+                    /* align-self: first baseline ; same as baseline */
+                    /* flex-grow: 2; */
+                    flex-basis: 10%; /*increase only width of so handle x axis not y there i can use overflow y:scroll*/
+                    /* overflow-y: scroll; */
+                    /* height: 200px; */
+
+}

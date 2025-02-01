@@ -1,0 +1,84 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .outercontainer
+{
+                    border: 2px solid black;
+                    background-color: lightcoral;
+                    height: 400px;
+                    /* width: 400px; */
+                    /* display: flex; */
+                    /* flex-direction: column; */
+                    display: grid;
+
+                    grid-template-rows: 50px 1fr 1fr 1fr 1fr 20px;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+gap: 7px;
+
+}
+
+.innercontainer
+{
+                    border: 2px solid black;
+                    /* height: 70px; */
+                    /* width: 70px; */
+                    background-color: rgb(43, 255, 0);
+
+}
+
+#box1
+{
+                    /* rowspan */
+                    grid-column-start: 1;
+                    grid-column-end:5 ;
+                    /* colspan */
+                    /* grid-row-start: 1;
+                    grid-row-end: 3; */
+
+                    text-align: center;
+
+}
+
+
+#box2
+{
+                    /* colspan;*/
+                    grid-row-start: 2;
+                    grid-row-end:7 ;
+                    text-align: center;
+
+                    
+}
+
+#box3
+{
+
+                    /* rowspan */
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+
+                    /* colspan */
+                    grid-row-start: 2;
+                    grid-row-end: 7;
+                    text-align: center;
+}
+
+#box4
+{
+                    /* colspan */
+                    grid-row-start: 2;
+                    grid-row-end: 7;
+
+                    /* rowspan */
+                    grid-column-start: 4;
+                    grid-column-end: 5;
+                    text-align: center;
+}
+
+#box5
+{
+                    grid-column-start: 1;
+                    grid-column-end: 5;
+
+                    grid-row-start: 7;
+                    grid-row-end: 8;
+                    text-align: center;
+}
